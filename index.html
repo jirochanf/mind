@@ -7,29 +7,24 @@
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image-aframe.prod.js"></script>
 
     <script>
-	    const showInfo = () => {
+      const showInfo = () => {
         let y = 0;
         const profileButton = document.querySelector("#profile-button");
         const webButton = document.querySelector("#web-button");
         const emailButton = document.querySelector("#email-button");
         const locationButton = document.querySelector("#location-button");
         const text = document.querySelector("#text");
-        const namecard = document.querySelector("#namecard");
 
         profileButton.setAttribute("visible", true);
         setTimeout(() => {
           webButton.setAttribute("visible", true);
-        }, 10);
+        }, 300);
         setTimeout(() => {
           emailButton.setAttribute("visible", true);
-        }, 20);
+        }, 600);
         setTimeout(() => {
           locationButton.setAttribute("visible", true);
-        }, 30);
-		    setTimeout(() => {
-          namecard.setAttribute("visible", true);
-        }, 40);
-		    
+        }, 900);
 
         let currentTab = '';
         webButton.addEventListener('click', function (evt) {
@@ -40,12 +35,10 @@
           text.setAttribute("value", "hello@softmind.tech");
           currentTab = 'email';
         });
-	      
         profileButton.addEventListener('click', function (evt) {
           text.setAttribute("value", "AR, VR solutions and consultation");
           currentTab = 'profile';
         });
-	      
         locationButton.addEventListener('click', function (evt) {
           console.log("loc");
           text.setAttribute("value", "Vancouver, Canada | Hong Kong");
@@ -54,7 +47,7 @@
 
         text.addEventListener('click', function (evt) {
           if (currentTab === 'web') {
-            window.location.href="https://netken.info/";
+            window.location.href="https://softmind.tech";
           }
         });
       }
@@ -107,7 +100,7 @@
               done();
             }, 500);
           }
-          portfolio.setAttribute("position", "0 " + 0 + " -0.01");
+          portfolio.setAttribute("position", "0 " + y + " -0.01");
         }, 10);
       }
 
@@ -120,7 +113,7 @@
             clearInterval(id);
             onDone();
           }
-          avatar.setAttribute("position", "0 0.6" + z);
+          avatar.setAttribute("position", "0 -0.25 " + z);
         }, 10);
       }
 
@@ -228,39 +221,39 @@
     <div class="example-container">
       <div id="example-scanning-overlay" class="hidden">
 	<div class="inner">
-	  <img src="./assets/overlay.jpg"/>
+	  <img src="./assets/card-example/card.png"/>
 	  <div class="scanline"></div>
 	</div>
       </div>
 
-      <a-scene mindar-image="imageTargetSrc: ./assets/targets1.mind; showStats: false; uiScanning: #example-scanning-overlay;" embedded color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+      <a-scene mindar-image="imageTargetSrc: https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/card-example/card.mind; showStats: false; uiScanning: #example-scanning-overlay;" embedded color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
         <a-assets>
-          <img id="card" src="./assets/meishi.png" />
-          <img id="icon-web" src="./assets/web.png" />
-          <img id="icon-location" src="./assets/youtube.png" />
-          <img id="icon-profile" src="./assets/kao.gif" />
-          <img id="icon-phone" src="./assets/phone.png" />
-          <img id="icon-email" src="./assets/email.png" />
-          <img id="icon-play" src="./assets/play.png" />
-          <img id="icon-left" src="./assets/left.png" />
-          <img id="icon-right" src="./assets/right.png" />
-          <img id="paintandquest-preview" src="./assets/preview.png" />
-          <video id="paintandquest-video-mp4" autoplay="false" loop="true" src="./assets/video3.mp4"></video>
-          <video id="paintandquest-video-webm" autoplay="false" loop="true" src="./assets/paintandquest.webm"></video>
-          <img id="coffeemachine-preview" src="./assets/alubum1.jpeg" />
-          <img id="peak-preview" src="./assets/alubum2.jpeg" />
+          <img id="card" src="./assets/card-example/card.png" />
+          <img id="icon-web" src="./assets/card-example/icons/web.png" />
+          <img id="icon-location" src="./assets/card-example/icons/location.png" />
+          <img id="icon-profile" src="./assets/card-example/icons/profile.png" />
+          <img id="icon-phone" src="./assets/card-example/icons/phone.png" />
+          <img id="icon-email" src="./assets/card-example/icons/email.png" />
+          <img id="icon-play" src="./assets/card-example/icons/play.png" />
+          <img id="icon-left" src="./assets/card-example/icons/left.png" />
+          <img id="icon-right" src="./assets/card-example/icons/right.png" />
+          <img id="paintandquest-preview" src="./assets/card-example/portfolio/paintandquest-preview.png" />
+          <video id="paintandquest-video-mp4" autoplay="false" loop="true" src="./assets/card-example/portfolio/paintandquest.mp4"></video>
+          <video id="paintandquest-video-webm" autoplay="false" loop="true" src="./assets/card-example/portfolio/paintandquest.webm"></video>
+          <img id="coffeemachine-preview" src="./assets/card-example/portfolio/coffeemachine-preview.png" />
+          <img id="peak-preview" src="./assets/card-example/portfolio/peak-preview.png" />
           
-          <a-asset-item id="avatarModel" src="./assets/male_model.zip"></a-asset-item>
+          <a-asset-item id="avatarModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/examples/image-tracking/assets/card-example/softmind/scene.gltf"></a-asset-item>
         </a-assets>
 
         <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: 10000; objects: .clickable">
         </a-camera>
 
         <a-entity id="mytarget" mytarget mindar-image-target="targetIndex: 0">
+          <a-plane src="#card" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
 
-		
-<!-- ポートフォリ ライブラリー  -->		
           <a-entity visible=false id="portfolio-panel" position="0 0 -0.01">
+            <a-text value="Portfolio" color="black" align="center" width="2" position="0 0.4 0"></a-text>
             <a-entity id="portfolio-item0">
               <a-video id="paintandquest-video-link" webkit-playsinline playsinline width="1" height="0.552" position="0 0 0"></a-video>
               <a-image id="paintandquest-preview-button" class="clickable" src="#paintandquest-preview" alpha-test="0.5" position="0 0 0" height="0.552" width="1">
@@ -275,35 +268,30 @@
               </a-image>
             </a-entity>
 
-            <a-image visible=false id="portfolio-left-button" class="clickable" src="#icon-left" position="-0.6 0 0" height="0.15" width="0.15"></a-image>
-            <a-image visible=false id="portfolio-right-button" class="clickable" src="#icon-right" position="0.6 0 0" height="0.15" width="0.15"></a-image>
+            <a-image visible=false id="portfolio-left-button" class="clickable" src="#icon-left" position="-0.7 0 0" height="0.15" width="0.15"></a-image>
+            <a-image visible=false id="portfolio-right-button" class="clickable" src="#icon-right" position="0.7 0 0" height="0.15" width="0.15"></a-image>
           </a-entity>
 
-<!-- ボタン配置  -->	
-	  <a-image visible=false  id="namecard" class="clickable" src="#card" position="0.2 0.65 0" height="0.5" width="0.35"
-	　　　　></a-image>
-		
           <a-image visible=false id="profile-button" class="clickable" src="#icon-profile" position="-0.42 -0.5 0" height="0.15" width="0.15"
-	　　　　></a-image>
+            animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
+          ></a-image>
 
           <a-image visible=false id="web-button" class="clickable" src="#icon-web" alpha-test="0.5" position="-0.14 -0.5 0" height="0.15" width="0.15"
-          link="href: https://netken.info/; title: My Home Page;"
+            animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
           ></a-image>
 
           <a-image visible=false id="email-button" class="clickable" src="#icon-email"  position="0.14 -0.5 0" height="0.15" width="0.15"
-          link="href: mailto:fujiwara@yomde.net;"
-		   ></a-image>
+            animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
+          ></a-image>
 
           <a-image visible=false id="location-button" class="clickable" src="#icon-location" position="0.42 -0.5 0" height="0.15" width="0.15"
-          link="href: https://www.youtube.com/channel/UC262c4cdRkfrllw37mpUKOA/videos; title: Senior Travel;"
-	  ></a-image>
+            animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
+          ></a-image>
 
-          <a-text value="Hi!  I'm Jiro." color="red" align="center" width="2" position="-0.32 -0.65 0"></a-text>
-		
-<!--	  <a-gltf-model id="avatar" rotation="200 90 0" position="0 0.4 0" scale="0.02 0.02 0.02" src="#avatarModel"></a-gltf-model> 
- <a-text id="text" class="clickable" value="" color="black" align="center" width="2" position="0 -1 0" geometry="primitive:plane; height: 0.1; width: 2;" material="opacity: 0.5"></a-text>
--->
-	      </a-entity>
+          <a-gltf-model id="avatar" rotation="0 0 0" position="0 -0.25 0" scale="0.004 0.004 0.004" src="#avatarModel"></a-gltf-model>
+
+          <a-text id="text" class="clickable" value="" color="black" align="center" width="2" position="0 -1 0" geometry="primitive:plane; height: 0.1; width: 2;" material="opacity: 0.5"></a-text>
+        </a-entity>
       </a-scene>
     </div>
   </body>
