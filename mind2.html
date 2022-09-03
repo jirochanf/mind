@@ -113,7 +113,7 @@
             clearInterval(id);
             onDone();
           }
-          avatar.setAttribute("position", "0 -0.25 " + z);
+          avatar.setAttribute("position", "0 1.25 " + z);
         }, 10);
       }
 
@@ -230,7 +230,7 @@
         <a-assets>
           <img id="card" src="./assets/meishi.png" />
           <img id="icon-web" src="./assets/web.png" />
-          <img id="icon-location" src="./assets/youtube.png" />
+          <img id="icon-location" src="./assets/location.png" />
           <img id="icon-profile" src="./assets/profile.png" />
           <img id="icon-phone" src="./assets/phone.png" />
           <img id="icon-email" src="./assets/email.png" />
@@ -243,14 +243,13 @@
           <img id="coffeemachine-preview" src="./assets/alubum1.jpeg" />
           <img id="peak-preview" src="./assets/alubum2.jpeg" />
           
- <!--        <a-asset-item id="avatarModel" src="./assets/gramophone.gltf"></a-asset-item>
-        </a-assets>   -->
+          <a-asset-item id="avatarModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/examples/image-tracking/assets/card-example/softmind/scene.gltf"></a-asset-item>
+        </a-assets>
 
         <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: 10000; objects: .clickable">
         </a-camera>
 
         <a-entity id="mytarget" mytarget mindar-image-target="targetIndex: 0">
-			
           <a-plane src="#card" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
 
           <a-entity visible=false id="portfolio-panel" position="0 0 -0.01">
@@ -269,7 +268,6 @@
               </a-image>
             </a-entity>
 
-			  <!-- ボタン配置 -->
             <a-image visible=false id="portfolio-left-button" class="clickable" src="#icon-left" position="-0.7 0 0" height="0.15" width="0.15"></a-image>
             <a-image visible=false id="portfolio-right-button" class="clickable" src="#icon-right" position="0.7 0 0" height="0.15" width="0.15"></a-image>
           </a-entity>
@@ -280,25 +278,19 @@
 
           <a-image visible=false id="web-button" class="clickable" src="#icon-web" alpha-test="0.5" position="-0.14 -0.5 0" height="0.15" width="0.15"
             animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
-				   link="href: https://netken.info/; title: My Home Page;"
           ></a-image>
 
           <a-image visible=false id="email-button" class="clickable" src="#icon-email"  position="0.14 -0.5 0" height="0.15" width="0.15"
             animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
-				   link="href: mailto:fujiwara@yomde.net;"
           ></a-image>
 
           <a-image visible=false id="location-button" class="clickable" src="#icon-location" position="0.42 -0.5 0" height="0.15" width="0.15"
             animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
-				link="href: https://www.youtube.com/channel/UC262c4cdRkfrllw37mpUKOA/videos; title: Senior Travel;"   
           ></a-image>
 
-		 <a-text value="Hi!  I'm Jiro." color="red" align="center" width="2" position="-0.32 -0.65 0"></a-text>	
-			
+          <a-gltf-model id="avatar" rotation="0 0 0" position="0 -0.25 0" scale="0.004 0.004 0.004" src="#avatarModel"></a-gltf-model>
 
-<!--			<a-gltf-model id="avatar" rotation="0 0 0" position="0 -0.25 0" scale="0.004 0.004 0.004" src="./assets/gramophone.gltf"></a-gltf-model>
           <a-text id="text" class="clickable" value="" color="black" align="center" width="2" position="0 -1 0" geometry="primitive:plane; height: 0.1; width: 2;" material="opacity: 0.5"></a-text>
--->
         </a-entity>
       </a-scene>
     </div>
