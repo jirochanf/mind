@@ -1,3 +1,4 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -17,7 +18,8 @@
         const locationButton = document.querySelector("#location-button");
         const text = document.querySelector("#text");
 		    const namecard = document.querySelector("#namecard");
-/*
+
+		  
         profileButton.setAttribute("visible", true);
         setTimeout(() => {
           webButton.setAttribute("visible", true);
@@ -57,7 +59,7 @@
           }
         });
       }
-*/
+
 
         //ポートフォリオ表示部　     
         const showPortfolio = (done) => {
@@ -231,16 +233,16 @@
 
   <body>
     
-    <div class="example-container">
+ <div class="example-container">
       <div id="example-scanning-overlay" class="hidden">
 	      <div class="inner">
 	        <img src="./assets/overlay.jpg"/>  <!-- オーバーレイ画像定義 -->
-	      <div class="scanline"></div>
-	    </div>
-    </div>
+	           <div class="scanline"></div>
+	      </div>
+      </div>
 
   <!-- ARシーン定義　-->
-      <a-scene mindar-image="imageTargetSrc: ./assets/targets1.mind; showStats: false; uiScanning: #example-scanning-overlay;" embedded color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+  <a-scene mindar-image="imageTargetSrc: ./assets/targets1.mind; showStats: false; uiScanning: #example-scanning-overlay;" embedded color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
         <a-assets>
           <img id="card" src="./assets/meishi.png" />
           <img id="icon-web" src="./assets/web.png" />
@@ -322,7 +324,9 @@
 -->
 		  
 		  </a-entity>
-      </a-scene>
+</a-scene>
+		
+		
     </div>
   </body>
 </html>
