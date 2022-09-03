@@ -19,13 +19,16 @@
         profileButton.setAttribute("visible", true);
         setTimeout(() => {
           webButton.setAttribute("visible", true);
-        }, 300);
+        }, 100);
         setTimeout(() => {
           emailButton.setAttribute("visible", true);
-        }, 600);
+        }, 200);
         setTimeout(() => {
           locationButton.setAttribute("visible", true);
-        }, 900);
+        }, 300);
+		etTimeout(() => {
+          namecard.setAttribute("visible", true);
+        }, 200);
 
         let currentTab = '';
         webButton.addEventListener('click', function (evt) {
