@@ -1,3 +1,4 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -33,11 +34,11 @@
 
         let currentTab = '';
         webButton.addEventListener('click', function (evt) {
-          text.setAttribute("value", "https://netken.info/");
+          text.setAttribute("value", "https://softmind.tech");
           currentTab = 'web';
         });
         emailButton.addEventListener('click', function (evt) {
-          text.setAttribute("value", "fujiwara@yomde.net");
+          text.setAttribute("value", "hello@softmind.tech");
           currentTab = 'email';
         });
 	      
@@ -48,7 +49,7 @@
 	      
         locationButton.addEventListener('click', function (evt) {
           console.log("loc");
-          text.setAttribute("value", "Istanbul, Spain | Thai");
+          text.setAttribute("value", "Vancouver, Canada | Hong Kong");
           currentTab = 'location';
         });
 
@@ -228,7 +229,7 @@
     <div class="example-container">
       <div id="example-scanning-overlay" class="hidden">
 	<div class="inner">
-	  <img src="./assets/overlay.jpg"/>
+	  <img src="./assets/jiro_torebi.jpg"/>
 	  <div class="scanline"></div>
 	</div>
       </div>
@@ -244,11 +245,11 @@
           <img id="icon-play" src="./assets/play.png" />
           <img id="icon-left" src="./assets/left.png" />
           <img id="icon-right" src="./assets/right.png" />
-          <img id="paintandquest-preview" src="./assets/preview.png" />
+          <img id="paintandquest-preview" src="./assets/paintandquest-preview.png" />
           <video id="paintandquest-video-mp4" autoplay="false" loop="true" src="./assets/video3.mp4"></video>
           <video id="paintandquest-video-webm" autoplay="false" loop="true" src="./assets/paintandquest.webm"></video>
-          <img id="coffeemachine-preview" src="./assets/alubum1.jpeg" />
-          <img id="peak-preview" src="./assets/alubum2.jpeg" />
+          <img id="coffeemachine-preview" src="./assets/coffeemachine-preview.png" />
+          <img id="peak-preview" src="./assets/peak-preview.png" />
           
           <a-asset-item id="avatarModel" src="./assets/male_model.zip"></a-asset-item>
         </a-assets>
@@ -260,48 +261,48 @@
 
 		
 <!-- ポートフォリ ライブラリー  -->		
-          <a-entity visible=false id="portfolio-panel" position="0 0 -0.01">
+          <a-entity visible="false" id="portfolio-panel" position="0 0 -0.01">
             <a-entity id="portfolio-item0">
               <a-video id="paintandquest-video-link" webkit-playsinline playsinline width="1" height="0.552" position="0 0 0"></a-video>
               <a-image id="paintandquest-preview-button" class="clickable" src="#paintandquest-preview" alpha-test="0.5" position="0 0 0" height="0.552" width="1">
               </a-image>
             </a-entity>
-            <a-entity id="portfolio-item1" visible=false>
+            <a-entity id="portfolio-item1" visible="false">
               <a-image class="clickable" src="#coffeemachine-preview" alpha-test="0.5" position="0 0 0" height="0.552" width="1">
               </a-image>
             </a-entity>
-            <a-entity id="portfolio-item2" visible=false>
+            <a-entity id="portfolio-item2" visible="false">
               <a-image class="clickable" src="#peak-preview" alpha-test="0.5" position="0 0 0" height="0.552" width="1">
               </a-image>
             </a-entity>
 
-            <a-image visible=false id="portfolio-left-button" class="clickable" src="#icon-left" position="-0.6 0 0" height="0.15" width="0.15"></a-image>
-            <a-image visible=false id="portfolio-right-button" class="clickable" src="#icon-right" position="0.6 0 0" height="0.15" width="0.15"></a-image>
+            <a-image visible="false" id="portfolio-left-button" class="clickable" src="#icon-left" position="-0.6 0 0" height="0.15" width="0.15"></a-image>
+            <a-image visible="false" id="portfolio-right-button" class="clickable" src="#icon-right" position="0.6 0 0" height="0.15" width="0.15"></a-image>
           </a-entity>
 
 <!-- ボタン配置  -->	
-	  <a-image visible=false  id="namecard" class="clickable" src="#card" position="0.2 0.65 0" height="0.5" width="0.35"
+	  <a-image visible="false"  id="namecard" class="clickable" src="#card" position="0.2 0.65 0" height="0.5" width="0.35"
 	　　　　></a-image>
 		
-          <a-image visible=false id="profile-button" class="clickable" src="#icon-profile" position="-0.42 -0.5 0" height="0.15" width="0.15"
+          <a-image visible="false" id="profile-button" class="clickable" src="#icon-profile" position="-0.42 -0.5 0" height="0.15" width="0.15"
 	　　　　></a-image>
 
-          <a-image visible=false id="web-button" class="clickable" src="#icon-web" alpha-test="0.5" position="-0.14 -0.5 0" height="0.15" width="0.15"
+          <a-image visible="false" id="web-button" class="clickable" src="#icon-web" alpha-test="0.5" position="-0.14 -0.5 0" height="0.15" width="0.15"
           link="href: https://netken.info/; title: My Home Page;"
           ></a-image>
 
-          <a-image visible=false id="email-button" class="clickable" src="#icon-email"  position="0.14 -0.5 0" height="0.15" width="0.15"
+          <a-image visible="false" id="email-button" class="clickable" src="#icon-email"  position="0.14 -0.5 0" height="0.15" width="0.15"
           link="href: mailto:fujiwara@yomde.net;"
 		   ></a-image>
 
-          <a-image visible=false id="location-button" class="clickable" src="#icon-location" position="0.42 -0.5 0" height="0.15" width="0.15"
+          <a-image visible="false" id="location-button" class="clickable" src="#icon-location" position="0.42 -0.5 0" height="0.15" width="0.15"
           link="href: https://www.youtube.com/channel/UC262c4cdRkfrllw37mpUKOA/videos; title: Senior Travel;"
 	  ></a-image>
 
           <a-text value="Hi!  I'm Jiro." color="red" align="center" width="2" position="-0.32 -0.65 0"></a-text>
 		
-	  <a-gltf-model id="avatar" rotation="200 90 0" position="0 0.4 0" scale="0.02 0.02 0.02" src="#avatarModel"></a-gltf-model> 
-<! -- <a-text id="text" class="clickable" value="" color="black" align="center" width="2" position="0 -1 0" geometry="primitive:plane; height: 0.1; width: 2;" material="opacity: 0.5"></a-text>
+<!--	  <a-gltf-model id="avatar" rotation="200 90 0" position="0 0.4 0" scale="0.02 0.02 0.02" src="#avatarModel"></a-gltf-model> 
+			<a-text id="text" class="clickable" value="" color="black" align="center" width="2" position="0 -1 0" geometry="primitive:plane; height: 0.1; width: 2;" material="opacity: 0.5"></a-text>
 -->
 	      </a-entity>
       </a-scene>
