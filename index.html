@@ -7,6 +7,9 @@
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image.prod.js"></script>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image-aframe.prod.js"></script>
+	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+	<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>	  
+	
 
 <!--  プロファイル　　スクリプト　　-->
     <script>
@@ -317,12 +320,15 @@
 			
 	<a-image  src="./assets/title.png" position="-0.2 0.1 0" height="2" width="2"></a-image>		
 			
-<a-entity  animation="property: object3D.position.x; to:-10; dir: alternate; dur: 5000; loop: true"> 
+<model-viewer preload poster="assets/asset.jpeg" src="./3dmodel/trail.gltf" ios-src="./3dmodel/trail.usdz" 
+		      auto-rotate camera-controls ar alt="3dmodel"></model-viewer>	
+			
+
+		  <!--
+ <a-entity  animation="property: object3D.position.x; to:-10; dir: alternate; dur: 5000; loop: true"> 
 <a-gltf-model src="3dmodel/toy_biplane.gltf" position="3 7 -15" rotation="0 90 180" scale="0.25 0.25 0.25" 
 	      gesture-handler></a-gltf-model>
-</a-entity>			
-
-		  <!--			
+</a-entity>  
 <a-text id="text" class="clickable" value="" color="black" align="center" width="2" position="0 -1 0" geometry="primitive:plane; height: 0.1; width: 2;" material="opacity: 0.5"></a-text>
 -->
 		  
