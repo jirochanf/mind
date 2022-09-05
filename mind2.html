@@ -263,9 +263,13 @@
 
 <a-video src="./assets/video2.mp4" click-play 　width="1" height="0.5"  position="0 0 0" rotation="0 0 0"></a-video>
 		  
-<a-image  src="./assets/meishi2.jpg" position="0.3 0.55 0" height="0.4" width="0.65"></a-image>	
+ <a-image visible=false id="preview2" class="clickable" src="./assets/preview2.png" position="0.42 -0.5 0" height="0.15" width="0.15"
+   link="href: https://www.youtube.com/channel/UC262c4cdRkfrllw37mpUKOA/videos; title: Senior Travel;"
+          ></a-image>
+	
+	<a-image  src="./assets/meishi2.jpg" position="0.3 0.55 0" height="0.4" width="0.65"></a-image>	
 
-<a-asset-item id="raccoonModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/raccoon/scene.gltf"></a-asset-item>
+	<a-asset-item id="raccoonModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/raccoon/scene.gltf"></a-asset-item>
 </a-assets>	  
 <a-gltf-model rotation="0 0 0 " position="-0.3 0.35 0" scale="0.05 0.05 0.05" src="#bearModel" animation-mixer>
 
