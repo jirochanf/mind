@@ -211,7 +211,7 @@
           <a-asset-item id="avatarModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/examples/image-tracking/assets/card-example/softmind/scene.gltf"></a-asset-item>
           
 <!--<video id="thai" muted webkit-playsinline playsinline loop="true" src="./assets/video3.mp4"></video>  -->
-        <video id="thai" autoplay="true" loop="true" src="./assets/video2.mp4"></video>
+        <video id="thai" autoplay="false" loop="true" src="./assets/video2.mp4"></video>
 		  
           
 	  </a-assets>
@@ -219,6 +219,7 @@
           </a-camera>
 
 <a-entity id="mytarget" mytarget mindar-image-target="targetIndex: 0">
+	
    <a-entity visible=false id="portfolio-panel" position="0 0 -0.01">
             <a-entity id="portfolio-item0">
               <a-video id="paintandquest-video-link" webkit-playsinline playsinline width="1" height="0.552" position="0 0 0"></a-video>
@@ -261,7 +262,8 @@
 	 
 <a-entity mindar-image-target="targetIndex: 1">
 
-<a-video src="#thai"  click-play　width="1" height="0.5"  position="0 0 0" rotation="0 0 0"></a-video>	
+<a-video src="#thai"  　width="1" height="0.5"  position="0 0 0" rotation="0 0 0"></a-video>	
+<a-image src="./assets/preview2.png"  click-play　width="1" height="0.5"  position="0 0 0" rotation="0 0 0"></a-video>	
 	  
 <a-image  src="./assets/meishi2.jpg" position="0.3 0.55 0" height="0.4" width="0.65"></a-image>	
 
