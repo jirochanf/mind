@@ -85,7 +85,7 @@
             });
 
             paintandquestPreviewButton.addEventListener('click', () => {
-              paintandquestPreviewButton.setAttribute("visible", false);
+              paintandquestPreviewButton.setAttribute("visible", true);
               const testVideo = document.createElement( "video" );
               const canplayWebm = testVideo.canPlayType( 'video/webm; codecs="vp8, vorbis"' );
               if (canplayWebm == "") {
