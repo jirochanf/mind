@@ -237,11 +237,21 @@
 	 
 	 
 <a-entity mindar-image-target="targetIndex: 1">
-<!--
-<a-assets>
-	<video id="thai" position="0 0 0" autoplay muted webkit-playsinline playsinline loop="true" src="./assets/video2.mp4"></video>
-</a-assets>
--->
+
+	<script>
+    		AFRAME.registerComponent('click-play', {
+  		init: function () {
+      		var v = document.querySelector('#thai');
+    		this.el.addEventListener('mouseup', function (event) {
+    		//クリック時の処理
+                 v.play();
+        	    		});
+  		}
+		});
+	</script>
+	
+<a-video id="thai" src="./assets/video2.mp4" click-play position="0 0 0" width="1" height="0.5"  rotation="0 0 0"></a-video>	
+	
 <a-asset-item id="raccoonModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/raccoon/scene.gltf"></a-asset-item>
 </a-assets>
 <a-image visible="false"  id="namecard" class="clickable" src="./assets/meishi2.png" position="0.4 0.65 0" height="0.5" width="0.35"></a-image>		
