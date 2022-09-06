@@ -12,11 +12,10 @@
     <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
     <script src="https://unpkg.com/aframe-html-shader@0.2.0/dist/aframe-html-shader.js"></script>
     <script src="assets/virtual_tour.js"></script>
-	  
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	  
 
-	<script>
+<script>
     		AFRAME.registerComponent('click-play', {
   		init: function () {
       		var v = document.querySelector('#video1');
@@ -27,46 +26,55 @@
   		}
 		});
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	　　　　<script src="jquery.rwdImageMaps.min.js"></script>
-    	<script>
-		$(function() {
-  $('img[usemap]').rwdImageMaps();
-});
-    </script>	  
-	  
+
+
 	
 	</head>
 
   <body>
     <a-scene mindar-image="imageTargetSrc: ./assets/targets2.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
-   <a-assets>
+
+	<a-assets>
 		<a-asset-item id="bearModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/bear/scene.gltf"></a-asset-item>
+	
 		<a-asset-item id="raccoonModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/raccoon/scene.gltf"></a-asset-item>
-    	<video id="video1" muted webkit-playsinline playsinline loop="true" src="./assets/video3.mp4"></video>
-	   	<video id="video2" muted webkit-playsinline playsinline loop="true" src="./assets/video2.mp4"></video>
- 	　　<img id="icon-web" src="./assets/web.png" />
+    	
+		<video id="video1" muted webkit-playsinline playsinline loop="true" src="./assets/video3.mp4"></video>
+	   	
+		<video id="video2" muted webkit-playsinline playsinline loop="true" src="./assets/video2.mp4"></video>
+ 	　　
+		<img id="icon-web" src="./assets/web.png" />
           	
 	</a-assets>
 
-      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+<a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
 <!--    target1   -->		
       <a-entity mindar-image-target="targetIndex: 0">
+
 		<a-video src="#video1"  click-play width="1" height="0.65"  position="0 0 0" rotation="0 0 0"></a-video> 
- 	  
-	<a-gltf-model rotation="20 0 0 " position="0 0.4 0" scale="0.05 0.05 0.05" src="#raccoonModel" animation-mixer>
-      </a-entity>
+ 	
+		<a-image visible=false id="web-button" class="clickable" src="#icon-web" aposition="-0.14 -1 0" height="0.15" width="0.15"
+    link="href: https://netken.info/; title: My Home Page;"
+    ></a-image>  
+		  
+		<a-gltf-model rotation="20 0 0 " position="0 0.4 0" scale="0.05 0.05 0.05" src="#raccoonModel" animation-mixer>
+      
+	</a-entity>
 		  
 <!--    target2   -->		
       <a-entity mindar-image-target="targetIndex: 1">
-		<a-video src="#video2"  width="1" height="0.65"  position="0 0 0" rotation="0 0 0"></a-video> 
-		 <a-image visible=false id="web-button" class="clickable" src="#icon-web" aposition="-0.14 -1 0" height="0.15" width="0.15"
+		
+		  <a-video src="#video2"  width="1" height="0.65"  position="0 0 0" rotation="0 0 0"></a-video> 
+		 
+		  <a-image visible=false id="web-button" class="clickable" src="#icon-web" aposition="-0.14 -1 0" height="0.15" width="0.15"
     link="href: https://netken.info/; title: My Home Page;"
     ></a-image>
  	  
 	<a-gltf-model rotation="20 0 0 " position="0 0.4 0" scale="0.05 0.05 0.05" src="#bearModel" animation-mixer>
-      </a-entity>
-    </a-scene>
+      
+		</a-entity>
+    
+</a-scene>
   </body>
 </html>
