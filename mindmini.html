@@ -9,18 +9,6 @@
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image-aframe.prod.js"></script>
 
-<script>
-    		AFRAME.registerComponent('click-play', {
-  		init: function () {
-      		var v = document.querySelector('#video2');
-    		this.el.addEventListener('mouseup', function (event) {
-    		//クリック時の処理
-                 v.play();
-        	    		});
-  		}
-		});
-</script>
-
 <body>
 	
  <a-scene mindar-image="imageTargetSrc: ./assets/targets2.mind.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
