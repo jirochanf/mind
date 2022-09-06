@@ -139,7 +139,23 @@
           avatar.setAttribute("position", "0 1.25 " + z);
         }, 10);
       }
-   
+ 
+	const Video2 = () => {  
+	   preview-button2.addEventListener('click', () => {
+              preview-button2.setAttribute("visible", false);
+              const testVideo = document.createElement( "video" );
+              const canplayWebm = testVideo.canPlayType( 'video/webm; codecs="vp8, vorbis"' );
+              if (canplayWebm == "") {
+                document.querySelector("#video-link2").setAttribute("src", "#video2");
+                document.querySelector("#paintandquest-video-mp4").play();
+              } else {
+                document.querySelector("#video-link2").setAttribute("src", "#paintandquest-video-webm");
+                document.querySelector("#paintandquest-video-webm").play();
+              }
+            });
+	}
+	
+	  
       //  Aframeでターゲットを摘出 
       AFRAME.registerComponent('mytarget', {
         init: function () {
@@ -206,7 +222,11 @@
           <img id="icon-right" src="./assets/right.png" />
           <img id="paintandquest-preview" src="./assets/preview.png" />
           <video id="paintandquest-video-mp4" autoplay="false" loop="true" src="./assets/video3.mp4"></video>
-          <video id="paintandquest-video-webm" autoplay="false" loop="true" src="./assets/paintandquest.webm"></video>
+		  
+          <video id="video2" autoplay="false" loop="true" src="./assets/video2.mp4"></video>
+		  <img id="preview2" src="./assets/preview2.png" />
+          
+		  <video id="paintandquest-video-webm" autoplay="false" loop="true" src="./assets/paintandquest.webm"></video>
           <img id="coffeemachine-preview" src="./assets/alubum1.jpeg" />
           <img id="peak-preview" src="./assets/alubum2.jpeg" />
           <a-asset-item id="avatarModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/examples/image-tracking/assets/card-example/softmind/scene.gltf"></a-asset-item>
@@ -262,22 +282,21 @@
 	 
 <a-entity mindar-image-target="targetIndex: 1">
 
-<a-video src="./assets/video2.mp4" class="clickable" click-play 　width="1" height="0.65"  position="0 0 0" rotation="0 0 0"></a-video>
 
-          <a-entity id="portfolio-item0">
-              <a-video id="paintandquest-video-link" webkit-playsinline playsinline width="1" height="0.552" position="0 0 0"></a-video>
-              <a-image id="paintandquest-preview-button" class="clickable" src="#paintandquest-preview" alpha-test="0.5" position="0 0 0" height="0.552" width="1">
+          <a-entity id="thai">
+              <a-video id="video-link2" src="#video2" webkit-playsinline playsinline width="1" height="0.552" position="0 0 0"></a-video>
+              <a-image id="preview-button2" class="clickable" src="#preview" alpha-test="0.5" position="0 0 0" height="0.552" width="1">
               </a-image>
-  	
 
-<!--	
+<!--
+<a-video src="./assets/video2.mp4" class="clickable" click-play 　width="1" height="0.65"  position="0 0 0" rotation="0 0 0"></a-video>
  <a-image visible=false id="preview2" class="clickable" src="./assets/preview2.png" position="0 0 0" height="0.5" width="1"
    link="href: https://www.youtube.com/channel/UC262c4cdRkfrllw37mpUKOA/videos; title: Senior Travel;"></a-image>
 -->	
 	<a-image  src="./assets/meishi2.jpg" lass="clickable" click-play position="0.3 0.55 0" height="0.4" width="0.65"></a-image>
 
 	<a-asset-item id="raccoonModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/raccoon/scene.gltf"></a-asset-item>
-</a-assets>	  
+	</a-assets>	  
 <a-gltf-model rotation="0 0 0 " position="-0.3 0.35 0" scale="0.05 0.05 0.05" src="#bearModel" animation-mixer>
 
 </a-entity>
