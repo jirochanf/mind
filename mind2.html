@@ -206,7 +206,6 @@
           <img id="paintandquest-preview" src="./assets/preview.png" />
           <video id="paintandquest-video-mp4" autoplay="false" loop="true" src="./assets/video3.mp4"></video>
 		  
-<video id="video2" muted webkit-playsinline playsinline loop="true" src="./assets/video2.mp4"></video>
 		  <img id="preview2" src="./assets/preview2.png" />
           
 		  <video id="paintandquest-video-webm" autoplay="false" loop="true" src="./assets/paintandquest.webm"></video>
@@ -261,7 +260,9 @@
 	 
 	 
 <a-entity mindar-image-target="targetIndex: 1">
-
+<a-assets>
+	<video id="video2" muted webkit-playsinline playsinline loop="true" src="./assets/video2.mp4"></video>
+</a-assets>
 <a-video src="#video2" click-play width="1" height="0.65"  position="0 0 0" rotation="0 0 0"></a-video> 
           
 <a-image  src="./assets/meishi2.jpg" lass="clickable" position="0.3 0.55 0" height="0.4" width="0.65"></a-image>
