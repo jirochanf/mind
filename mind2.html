@@ -174,23 +174,7 @@
 		});
 </script>
 
-<script>
-    var scene = document.querySelector("a-scene");
-        var video = document.getElementById("video2");
 
-        if (scene.hasLoaded) {
-            run();
-        } else {
-            scene.addEventListener("loaded", playvideo);
-        }
-
-        function playvideo() {
-            scene.querySelector(".a-enter-vr-button").addEventListener("click", function (e) {
-                video.play();
-            }, false);
-        }
-</script>	  
-	</head>
 
   <body>
     
@@ -228,14 +212,14 @@
           <img id="coffeemachine-preview" src="./assets/alubum1.jpeg" />
           <img id="peak-preview" src="./assets/alubum2.jpeg" />
           <a-asset-item id="avatarModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/examples/image-tracking/assets/card-example/softmind/scene.gltf"></a-asset-item>
-         
+
+		  <video id="video2" muted webkit-playsinline playsinline loop="true" src="./assets/video2.mp4"></video>
+
 	  </a-assets>
+	  
          <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: 10000; objects: .clickable">
           </a-camera>
 	  
-	  <a-assets>
-<video id="video2" muted webkit-playsinline playsinline loop="true" src="./assets/video2.mp4"></video>
-</a-assets>
 
 <a-entity id="mytarget" mytarget mindar-image-target="targetIndex: 0">
 	
@@ -283,8 +267,9 @@
 
 
 <a-video src="#video2" width="1" height="0.65"  position="0 0 0" rotation="0 0 0"></a-video> 
+<a-image  src="./assets/preview2.png" class="clickable" position="0 0 0" width="1" height="0.65" ></a-image>
           
-<a-image  src="./assets/meishi2.jpg" lass="clickable" position="0.3 0.55 0" height="0.4" width="0.65"></a-image>
+<a-image  src="./assets/meishi2.jpg" class="clickable" position="0.3 0.55 0" height="0.4" width="0.65"></a-image>
 
 <a-asset-item id="raccoonModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/raccoon/scene.gltf"></a-asset-item>
 </a-assets>	  
