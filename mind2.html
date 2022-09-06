@@ -147,7 +147,7 @@
               const canplayWebm = testVideo.canPlayType( 'video/webm; codecs="vp8, vorbis"' );
               if (canplayWebm == "") {
                 document.querySelector("#video-link2").setAttribute("src", "#video2");
-                document.querySelector("#paintandquest-video-mp4").play();
+                document.querySelector("#video2").play();
               } else {
                 document.querySelector("#video-link2").setAttribute("src", "#paintandquest-video-webm");
                 document.querySelector("#paintandquest-video-webm").play();
