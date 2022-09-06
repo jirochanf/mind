@@ -161,7 +161,7 @@
         }
       });
 		
-		meishi.addEventListener("click", (e)=>{
+		play.addEventListener("click", (e)=>{
 	if(video2.paused){// 動画が停止しているかどうかを判定
 		video2.play();// 動画を再生
 	}else{
@@ -275,9 +275,11 @@
 -->	 
 <a-entity mindar-image-target="targetIndex: 1">
 
-	<a-video src="#video2"  preload="auto" width="1" height="0.65"  position="0 0 0" rotation="0 0 0"></a-video> 
+	<a-video src="#video2"  width="1" height="0.65"  position="0 0 0" rotation="0 0 0"></a-video> 
           
-	<a-image  id="meishi" src="./assets/meishi2.jpg" click-play class="clickable" position="0.3 0.55 0" height="0.4" width="0.65"></a-image>
+	<a-image  id="meishi" src="./assets/meishi2.jpg" class="clickable" position="0.3 0.55 0" height="0.4" width="0.65"></a-image>
+
+	<a-image  visible=false id="play" src="./assets/play.png" class="clickable" position="0 -0.55 0" height="0.4" ></a-image>
 
 	<a-asset-item id="raccoonModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/raccoon/scene.gltf"></a-asset-item>
 	</a-assets>	  
