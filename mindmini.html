@@ -1,15 +1,17 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image.prod.js"></script>
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image-aframe.prod.js"></script>
-  
-<script>
+
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@5.0.0/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
+    <script src="https://unpkg.com/aframe-html-shader@0.2.0/dist/aframe-html-shader.js"></script>
+    <script src="assets/virtual_tour.js"></script>
+    <script>
     		AFRAME.registerComponent('click-play', {
   		init: function () {
-      		var v = document.querySelector('#video1’);
+      		var v = document.querySelector('#video1');
     		this.el.addEventListener('mouseup', function (event) {
     		//クリック時の処理
                  v.play();
@@ -17,7 +19,14 @@
   		}
 		});
 </script>
-	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	　　　　<script src="jquery.rwdImageMaps.min.js"></script>
+    	<script>
+		$(function() {
+  $('img[usemap]').rwdImageMaps();
+});
+    </script>	  
+	  
 	
 	</head>
 
