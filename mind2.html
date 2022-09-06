@@ -162,12 +162,10 @@
       });
 		
 		meishi.addEventListener("click", (e)=>{
-	if(video01.paused){// 動画が停止しているかどうかを判定
-		video01.play();// 動画を再生
-		e.target.setAttribute("src", "#video2");// ボタンの画像を変更
+	if(video2.paused){// 動画が停止しているかどうかを判定
+		video2.play();// 動画を再生
 	}else{
-		video01.pause();// 動画を停止
-		e.target.setAttribute("src", "#video2");// ボタンの画像を変更
+		video2.pause();// 動画を停止
 	}
 });
     </script>
@@ -279,7 +277,7 @@
 
 	<a-video src="#video2"  preload="auto" width="1" height="0.65"  position="0 0 0" rotation="0 0 0"></a-video> 
           
-	<a-image  id="meishi" src="./assets/meishi2.jpg" class="clickable" position="0.3 0.55 0" height="0.4" width="0.65"></a-image>
+	<a-image  id="meishi" src="./assets/meishi2.jpg" click-play class="clickable" position="0.3 0.55 0" height="0.4" width="0.65"></a-image>
 
 	<a-asset-item id="raccoonModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/raccoon/scene.gltf"></a-asset-item>
 	</a-assets>	  
