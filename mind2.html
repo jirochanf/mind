@@ -161,7 +161,7 @@
         }
       });
 		
-		play.addEventListener("click", (e)=>{
+		icon-play.addEventListener("click", (e)=>{
 	if(video2.paused){// 動画が停止しているかどうかを判定
 		video2.play();// 動画を再生
 	}else{
@@ -211,6 +211,7 @@
           <img id="icon-play" src="./assets/play.png" />
           <img id="icon-left" src="./assets/left.png" />
           <img id="icon-right" src="./assets/right.png" />
+		  <img id="icon-play" src="./assets/play.png" />
           <img id="paintandquest-preview" src="./assets/preview.png" />
           <video id="paintandquest-video-mp4" autoplay="false" loop="true" src="./assets/video3.mp4"></video>
 		  
@@ -279,10 +280,8 @@
           
 	<a-image  id="meishi" src="./assets/meishi2.jpg" class="clickable" position="0.3 0.55 0" height="0.4" width="0.65"></a-image>
 
-	<a-image  visible=false id="play" src="./assets/play.png" class="clickable" position="0 -0.55 0" cale="0.5 0.5 0.5"></a-image>
+	<a-image  visible=false id="icon-play" src="#icon-play" class="clickable" position="0 -0.55 0" cale="0.5 0.5 0.5"></a-image>
 
-	<a-asset-item id="raccoonModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/raccoon/scene.gltf"></a-asset-item>
-	</a-assets>	  
 	<a-gltf-model rotation="0 0 0 " position="-0.3 0.35 0" scale="0.05 0.05 0.05" src="#bearModel" animation-mixer>
 
 </a-entity>
