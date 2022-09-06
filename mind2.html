@@ -176,27 +176,6 @@
 		});
 </script>
 
-<script>
-    var scene = document.querySelector("a-scene");
-        var video = document.getElementById("video2");
-
-        if (scene.hasLoaded) {
-            run();
-        } else {
-            scene.addEventListener("loaded", playvideo);
-        }
-
-        function playvideo() {
-            scene.querySelector(".a-enter-vr-button").addEventListener("click", function (e) {
-                video.play();
-            }, false);
-        }
-</script>	  
-	  
-	  
-	  
-	  
-	  
 	</head>
 
   <body>
