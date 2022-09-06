@@ -223,7 +223,7 @@
           <img id="paintandquest-preview" src="./assets/preview.png" />
           <video id="paintandquest-video-mp4" autoplay="false" loop="true" src="./assets/video3.mp4"></video>
 		  
-          <video id="video2" muted webkit-playsinline playsinline autoplay="false" loop="true" src="./assets/video2.mp4"></video>
+<video id="video2" muted webkit-playsinline playsinline loop="true" src="./assets/video2.mp4"></video>
 		  <img id="preview2" src="./assets/preview2.png" />
           
 		  <video id="paintandquest-video-webm" autoplay="false" loop="true" src="./assets/paintandquest.webm"></video>
@@ -279,22 +279,12 @@
 	 
 <a-entity mindar-image-target="targetIndex: 1">
 
-
+<a-video src="#video2" click-play  width="1" height="0.65"  position="0 0 0" rotation="0 0 0"></a-video> 
           
-<a-video src="#video2" class="clickable" click-play 　width="1" height="0.65"  position="0 0 0" rotation="0 0 0"></a-video>
-<!--
-<a-entity id="thai">
-              <a-video id="video-link2" src="#video2" webkit-playsinline playsinline width="1" height="0.552" position="0 0 0"></a-video>
-              <a-image id="preview-button2" class="clickable" src="#preview" alpha-test="0.5" position="0 0 0" height="0.552" width="1">
-              </a-image>
+<a-image  src="./assets/meishi2.jpg" lass="clickable" click-play position="0.3 0.55 0" height="0.4" width="0.65"></a-image>
 
- <a-image visible=false id="preview2" class="clickable" src="./assets/preview2.png" position="0 0 0" height="0.5" width="1"
-   link="href: https://www.youtube.com/channel/UC262c4cdRkfrllw37mpUKOA/videos; title: Senior Travel;"></a-image>
--->	
-	<a-image  src="./assets/meishi2.jpg" lass="clickable" click-play position="0.3 0.55 0" height="0.4" width="0.65"></a-image>
-
-	<a-asset-item id="raccoonModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/raccoon/scene.gltf"></a-asset-item>
-	</a-assets>	  
+<a-asset-item id="raccoonModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/raccoon/scene.gltf"></a-asset-item>
+</a-assets>	  
 <a-gltf-model rotation="0 0 0 " position="-0.3 0.35 0" scale="0.05 0.05 0.05" src="#bearModel" animation-mixer>
 
 </a-entity>
