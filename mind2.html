@@ -216,6 +216,10 @@
 	  </a-assets>
          <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: 10000; objects: .clickable">
           </a-camera>
+	  
+	  <a-assets>
+<video id="video2" muted webkit-playsinline playsinline loop="true" src="./assets/video2.mp4"></video>
+</a-assets>
 
 <a-entity id="mytarget" mytarget mindar-image-target="targetIndex: 0">
 	
@@ -261,9 +265,7 @@
 	 
 <a-entity mindar-image-target="targetIndex: 1">
 
-<a-assets>
-	<video id="video2" muted webkit-playsinline playsinline loop="true" src="./assets/video2.mp4"></video>
-</a-assets>
+
 <a-video src="#video2" width="1" height="0.65"  position="0 0 0" rotation="0 0 0"></a-video> 
           
 <a-image  src="./assets/meishi2.jpg" lass="clickable" position="0.3 0.55 0" height="0.4" width="0.65"></a-image>
