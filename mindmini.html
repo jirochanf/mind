@@ -36,6 +36,23 @@
 
 </head>
 	
+	<script>
+		window.onload = (e)=>{
+
+	const video01 = document.getElementById("video2");
+	const btn01 = document.getElementById("my_btn01");
+
+	btn01.addEventListener("click", (e)=>{
+		if(video01.paused){
+			video01.play();
+			e.target.setAttribute("src", "#icon-play");
+		}else{
+			video01.pause();
+			e.target.setAttribute("src", "#img_left");
+		}
+	});
+}
+ </script>
 	
 
   <body>
@@ -48,7 +65,8 @@
 		<video id="video1" muted webkit-playsinline playsinline loop="true" src="./assets/video3.mp4"></video>
 		<video id="video2" muted webkit-playsinline playsinline loop="true" src="./assets/video2.mp4"></video>
  	　　
-		<img id="icon-web" src="./assets/web.png" />
+		<img id="icon-play" src="./assets/play.png" />
+		<img id="img-left" src="./assets/left.png" />
           	
 	</a-assets>
 
@@ -73,13 +91,14 @@
 <!--    target1   -->		
       <a-entity id="mytarget1" mytarget1 mindar-image-target="targetIndex: 1">
 		
-	  <a-plane src="./assets/preview2.png" click-play position="0 0 0.1" height="0.552" width="1" rotation="0 0 0"></a-plane>  -
+<!--	  <a-plane src="./assets/preview2.png" click-play position="0 0 0.1" height="0.552" width="1" rotation="0 0 0"></a-plane>  -->
 
-		  <a-video src="#video2"  width="1" height="0.65"  position="0 0 0" rotation="0 0 0"></a-video> 
+	<a-video src="#video2"  width="1" height="0.65"  position="0 0 0" rotation="0 0 0"></a-video> 
+	<a-image id="my_btn01" src="#icon-play" position="0 -0.5 0" scale="0.3 0.3 0.3"></a-image>	  
 		 
-		  <a-image visible=false id="meishi" class="clickable" src="./assets/meishi.png" position="-0.14 0.05 0.05" height="0.15" width="0.15"
+<!--		  <a-image visible=false id="meishi" class="clickable" src="./assets/meishi.png" position="-0.14 0.05 0.05" height="0.15" width="0.15"
     link="href: https://netken.info/; title: My Home Page;"
-    ></a-image>
+    ></a-image>  -->
  	  
 	<a-gltf-model rotation="20 0 0 " position="0 0.4 0" scale="0.05 0.05 0.05" src="#bearModel" animation-mixer>
       
