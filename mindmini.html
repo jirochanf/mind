@@ -33,7 +33,7 @@
         init: function () {
           this.el.addEventListener('targetFound', event => {
             console.log("target found");
-			 var v = document.querySelector('#video1');
+			 var v = document.querySelector('#video2');
     		　this.el.addEventListener('mouseup', function (event) {
     		//クリック時の処理
                  v.play();
@@ -70,7 +70,7 @@
 <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
 <!--    target0   -->		
-      <a-entity id="mytarget1" mindar-image-target="targetIndex: 0">
+      <a-entity id="mytarget" mitarget mindar-image-target="targetIndex: 0">
 	<!-- <a-video src="#video1"  click-play width="1" height="0.65"  position="0 0 0" rotation="0 0 0"></a-video>  		  
 
   	<a-image visible="false"  id="namecard" class="clickable" src="./assets/meishi.png" position="0.4 0.65 0" height="0.5" width="0.35"></a-image>		
@@ -87,11 +87,11 @@
 	</a-entity>
 		  
 <!--    target1   -->		
-      <a-entity id="mytarget2" mindar-image-target="targetIndex: 1">
+      <a-entity id="mytarget1" mytarget1 mindar-image-target="targetIndex: 1">
 		
 	  <a-plane src="./assets/preview2.png" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
 
-<!--		  <a-video src="#video2"  width="1" height="0.65"  position="0 0 0" rotation="0 0 0"></a-video>  -->
+<		  <a-video src="#video2"  width="1" height="0.65"  position="0 0 0" rotation="0 0 0"></a-video>  -->
 		 
 		  <a-image visible=false id="web-button" class="clickable" src="#icon-web" position="-0.14 0,05 0.05" height="0.15" width="0.15"
     link="href: https://netken.info/; title: My Home Page;"
