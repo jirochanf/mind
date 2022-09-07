@@ -261,16 +261,21 @@
 			<img id="preview2" src="./assets/preview2.png" />
 			
 			
-          <video id="paintandquest-video-mp4" autoplay="false" loop="true" src="./assets/video3.mp4"></video>
-			<video id="target2-mp4" autoplay="false" loop="true" src="./assets/video2.mp4"></video>
+          <video id="paintandquest-video-mp4" autoplay="false" loop="faulse" src="./assets/video3.mp4"></video>
+			<video id="target2-mp4" autoplay="false" loop="faulse" src="./assets/video2.mp4"></video>
 			
-          <video id="paintandquest-video-webm" autoplay="false" loop="true" src="./assets/paintandquest.webm"></video>
+          <video id="paintandquest-video-webm" autoplay="false" loop="faulse" src="./assets/paintandquest.webm"></video>
           <img id="coffeemachine-preview" src="./assets/alubum1.jpeg" />
           <img id="peak-preview" src="./assets/alubum2.jpeg" />
           
-          <a-asset-item id="avatarModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/examples/image-tracking/assets/card-example/softmind/scene.gltf"></a-asset-item>
-          </a-assets>
 
+<!-- 3D Model			
+			<a-asset-item id="avatarModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/examples/image-tracking/assets/card-example/softmind/scene.gltf"></a-asset-item> 
+          </a-assets>  -->
+	  	　<a-asset-item id="bearModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/bear/scene.gltf"></a-asset-item>
+		　<a-asset-item id="raccoonModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/raccoon/scene.gltf"></a-asset-item>
+  
+<!-- camera  -->
           <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: 10000; objects: .clickable">
           </a-camera>
 
@@ -346,6 +351,7 @@
               </a-image>
           
 	<a-image  id="meishi" src="./assets/meishi2.jpg" class="clickable" position="0.3 0.55 0" height="0.4" width="0.65"></a-image>
+		
 	<a-gltf-model rotation="0 0 0 " position="-0.3 0.35 0" scale="0.05 0.05 0.05" src="#bearModel" animation-mixer>
 
     <a-image visible=false id="web-button" class="clickable" src="#icon-web" aposition="-0.14 -0.5 0" height="0.15" width="0.15"
@@ -355,22 +361,6 @@
 		
 		
 </a-entity>	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
 	 
 	 </a-scene>
 		
