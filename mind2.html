@@ -258,7 +258,12 @@
           <img id="icon-left" src="./assets/left.png" />
           <img id="icon-right" src="./assets/right.png" />
           <img id="paintandquest-preview" src="./assets/preview.png" />
+			<img id="preview2" src="./assets/preview2.png" />
+			
+			
           <video id="paintandquest-video-mp4" autoplay="false" loop="true" src="./assets/video3.mp4"></video>
+			<video id="target2-mp4" autoplay="false" loop="true" src="./assets/video2.mp4"></video>
+			
           <video id="paintandquest-video-webm" autoplay="false" loop="true" src="./assets/paintandquest.webm"></video>
           <img id="coffeemachine-preview" src="./assets/alubum1.jpeg" />
           <img id="peak-preview" src="./assets/alubum2.jpeg" />
@@ -269,7 +274,7 @@
           <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: 10000; objects: .clickable">
           </a-camera>
 
-<!-- ターゲット 発見後></-->	  
+<!-- ターゲット1発見後></-->	  
   <a-entity id="mytarget" mytarget mindar-image-target="targetIndex: 0">
 
 	<!--   <a-plane src="#card" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>  -->
@@ -283,6 +288,7 @@
               <a-video id="paintandquest-video-link" webkit-playsinline playsinline width="1" height="0.552" position="0 0 0"></a-video>
               <a-image id="paintandquest-preview-button" class="clickable" src="#paintandquest-preview" alpha-test="0.5" position="0 0 0" height="0.552" width="1">
               </a-image>
+				
             </a-entity>
             <a-entity id="portfolio-item1" visible=false>
               <a-image class="clickable" src="#coffeemachine-preview" alpha-test="0.5" position="0 0 0" height="0.552" width="1">
@@ -330,13 +336,16 @@
 <!-- 2番目のターゲット発見後-->
 	  
 <a-entity mindar-image-target="targetIndex: 1">
+<!--<a-video src="#video2"  width="1" height="0.65"  position="0 0 0" rotation="0 0 0"></a-video> -->
+	
+	<a-entity id="portfolio-item1">
+ 
 
-	<a-video src="#video2"  width="1" height="0.65"  position="0 0 0" rotation="0 0 0"></a-video> 
-    <a-image  src="./assets/preview2.png" class="clickable" position="0 0 0" width="1" height="0.65" ></a-image>
+	<a-video id="video2-link" webkit-playsinline playsinline width="1" height="0.552" position="0 0 0"></a-video>
+    <a-image id="preview2-button" class="clickable" src="#preview2" alpha-test="0.5" position="0 0 0" height="0.552" width="1">
+              </a-image>
           
 	<a-image  id="meishi" src="./assets/meishi2.jpg" class="clickable" position="0.3 0.55 0" height="0.4" width="0.65"></a-image>
-
-
 	<a-gltf-model rotation="0 0 0 " position="-0.3 0.35 0" scale="0.05 0.05 0.05" src="#bearModel" animation-mixer>
 
     <a-image visible=false id="web-button" class="clickable" src="#icon-web" aposition="-0.14 -0.5 0" height="0.15" width="0.15"
