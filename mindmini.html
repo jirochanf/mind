@@ -14,7 +14,20 @@
     <script src="assets/virtual_tour.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	  
- <script>
+
+<script>
+			AFRAME.registerComponent('click-play', {
+  		init: function () {
+      		var v = document.querySelector('#video1');
+    		this.el.addEventListener('mouseup', function (event) {
+    		//クリック時の処理
+                 v.play();
+        	    		});
+  		}
+		});
+</script>	  
+
+	  <script>
 	  //  Aframeでターゲットを摘出後
       AFRAME.registerComponent('mytarget', {
         init: function () {
@@ -31,17 +44,7 @@
       });
     </script>
 
-	<script>
-			AFRAME.registerComponent('click-play', {
-  		init: function () {
-      		var v = document.querySelector('#video1');
-    		this.el.addEventListener('mouseup', function (event) {
-    		//クリック時の処理
-                 v.play();
-        	    		});
-  		}
-		});
-</script>
+
 
 
 	
