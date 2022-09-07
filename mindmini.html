@@ -27,31 +27,7 @@
 		});
 </script>	  
 
-	  <script>
-	  //  Aframeでターゲットを摘出後
-      AFRAME.registerComponent('mytarget1', {
-        init: function () {
-          this.el.addEventListener('targetFound', event => {
-            console.log("target found");
-			 var v = document.querySelector('#video2');
-    		　this.el.addEventListener('mouseup', function (event) {
-    		//クリック時の処理
-                 v.play();
-        	    		});
-            });
-          });
-          this.el.addEventListener('targetLost', event => {
-            console.log("target found");
-          });
-          //this.el.emit('targetFound');
-        };
-    </script>
-
-
-
-
-	
-	</head>
+</head>
 
   <body>
     <a-scene mindar-image="imageTargetSrc: ./assets/targets2.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
