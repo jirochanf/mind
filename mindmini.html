@@ -33,15 +33,18 @@
         init: function () {
           this.el.addEventListener('targetFound', event => {
             console.log("target found");
-            click-play(() => {
+			 var v = document.querySelector('#video1');
+    		　this.el.addEventListener('mouseup', function (event) {
+    		//クリック時の処理
+                 v.play();
+        	    		});
             });
           });
           this.el.addEventListener('targetLost', event => {
             console.log("target found");
           });
           //this.el.emit('targetFound');
-        }
-      });
+        };
     </script>
 
 
@@ -55,11 +58,9 @@
 
 	<a-assets>
 		<a-asset-item id="bearModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/bear/scene.gltf"></a-asset-item>
-	
 		<a-asset-item id="raccoonModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/raccoon/scene.gltf"></a-asset-item>
     	
 		<video id="video1" muted webkit-playsinline playsinline loop="true" src="./assets/video3.mp4"></video>
-	   	
 		<video id="video2" muted webkit-playsinline playsinline loop="true" src="./assets/video2.mp4"></video>
  	　　
 		<img id="icon-web" src="./assets/web.png" />
