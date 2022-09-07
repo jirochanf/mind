@@ -16,29 +16,10 @@
 	  
 
 	<script>
-		    //  Aframeでターゲットを摘出 
-      AFRAME.registerComponent('mytarget1', {
+		AFRAME.registerComponent('mytarget1', {
         init: function () {
           this.el.addEventListener('targetFound', event => {
-            console.log("target found");
-         	       		var v = document.querySelector('#video2');
-    		this.el.addEventListener('mouseup', function (event) {
-    		//クリック時の処理
-                 v.play();
-		  });
-          this.el.addEventListener('targetLost', event => {
-            console.log("target found");
-          });
-          //this.el.emit('targetFound');
-        }
-      });
-	 </script>	  
-
-</head>
 	
-	<script>
-		window.onload = (e)=>{
-
 	const video01 = document.getElementById("video2");
 	const btn01 = document.getElementById("my_btn01");
 
@@ -52,7 +33,9 @@
 		}
 	});
 }
- </script>
+ </script>	
+
+</head>
 	
 
   <body>
