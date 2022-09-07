@@ -280,8 +280,7 @@
           </a-camera>
 
 <!-- ターゲット1発見後></-->	  
-  <a-entity id="mytarget" mytarget mindar-image-target="targetIndex: 0">
-
+<a-entity id="mytarget" mytarget mindar-image-target="targetIndex: 0">
 	<!--   <a-plane src="#card" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>  -->
 
             <a-entity visible=false id="portfolio-panel" position="0 0 -0.01">
@@ -293,7 +292,6 @@
               <a-video id="paintandquest-video-link" webkit-playsinline playsinline width="1" height="0.552" position="0 0 0"></a-video>
               <a-image id="paintandquest-preview-button" class="clickable" src="#paintandquest-preview" alpha-test="0.5" position="0 0 0" height="0.552" width="1">
               </a-image>
-				
             </a-entity>
             <a-entity id="portfolio-item1" visible=false>
               <a-image class="clickable" src="#coffeemachine-preview" alpha-test="0.5" position="0 0 0" height="0.552" width="1">
@@ -336,8 +334,15 @@
 
  <a-gltf-model  id="3dmodel" src="./3dmodel/trail.gltf"  position="-0.3 0.8 0" rotation="30 -30 0" scale="0.03 0.03 0.03"></a-gltf-model>			
 
-	  
+		  <!--
+<model-viewer preload poster="assets/asset.jpeg" src="./3dmodel/trail.gltf" ios-src="./3dmodel/trail.usdz" 
+		      auto-rotate camera-controls ar alt="3dmodel"></model-viewer>	
+<a-text id="text" class="clickable" value="" color="black" align="center" width="2" position="0 -1 0" geometry="primitive:plane; height: 0.1; width: 2;" material="opacity: 0.5"></a-text>
+-->
+		  
 		  </a-entity>
+ 
+</a-entity>
 <!-- 2番目のターゲット発見後-->
 	   
 <a-entity mindar-image-target="targetIndex: 1">
