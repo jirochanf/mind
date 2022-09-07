@@ -248,6 +248,7 @@
   <!-- ARシーン定義　-->
   <a-scene mindar-image="imageTargetSrc: ./assets/targets2.mind; showStats: false; uiScanning: #example-scanning-overlay;" embedded color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
         <a-assets>
+			<!--画像  -->
           <img id="card" src="./assets/meishi.png" />
           <img id="icon-web" src="./assets/web.png" />
           <img id="icon-location" src="./assets/youtube.png" />
@@ -257,15 +258,20 @@
           <img id="icon-play" src="./assets/play.png" />
           <img id="icon-left" src="./assets/left.png" />
           <img id="icon-right" src="./assets/right.png" />
-          <img id="paintandquest-preview" src="./assets/preview.png" />
+		　<img id="paintandquest-preview" src="./assets/preview.png" />	
+		  <img id="coffeemachine-preview" src="./assets/alubum1.jpeg" />
+          <img id="peak-preview" src="./assets/alubum2.jpeg" />
+			
+			<!--動画  -->
           <video id="paintandquest-video-mp4" autoplay="false" loop="true" src="./assets/video3.mp4"></video>
           <video id="paintandquest-video-webm" autoplay="false" loop="true" src="./assets/paintandquest.webm"></video>
-          <img id="coffeemachine-preview" src="./assets/alubum1.jpeg" />
-          <img id="peak-preview" src="./assets/alubum2.jpeg" />
+			<video id="video2" autoplay="false" loop="true" src="./assets/video2.mp4"></video>
           
+			<!--3D model  -->
           <a-asset-item id="avatarModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/examples/image-tracking/assets/card-example/softmind/scene.gltf"></a-asset-item>
           </a-assets>
-
+	  
+<!-- カメラ設定  -->
           <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: 10000; objects: .clickable">
           </a-camera>
 
@@ -337,9 +343,9 @@
 	  
  <!-- ターゲット1　発見後-->	 
 	
-	          <a-entity id="mytarget2" mytarget mindar-image-target="targetIndex: 1">
+	<a-entity id="mytarget2" mytarget2 mindar-image-target="targetIndex: 1">
 	
-	<a-plane src="./assets/preview2.png" position="0 0 0" height="0.65" width="1" rotation="0 0 0"></a-plane>
+	<a-plane src="./assets/preview2.png" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
 
 		  <a-video src="#video2"  width="1" height="0.65"  position="0 0 0" rotation="0 0 0"></a-video> 
 		 
