@@ -13,35 +13,7 @@
     <script src="https://unpkg.com/aframe-html-shader@0.2.0/dist/aframe-html-shader.js"></script>
     <script src="assets/virtual_tour.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	  
-<script>
-    		AFRAME.registerComponent('click-play', {
-  		init: function () {
-      		var v = document.querySelector('#video2’);
-    		this.el.addEventListener('mouseup', function (event) {
-    		//クリック時の処理
-                 v.play();
-        	    		});
-  		}
-		});
-</script>
-
-<script>
-    var scene = document.querySelector("mytarget");
-        var video = document.getElementById("video1");
-
-        if (scene.hasLoaded) {
-            run();
-        } else {
-            scene.addEventListener("loaded", playvideo);
-        }
-
-        function playvideo() {
-            scene.querySelector(".a-enter-vr-button").addEventListener("click", function (e) {
-                video.play();
-            }, false);
-        }
-</script>	  
+	  	  
 
 </head>	
 
@@ -74,7 +46,19 @@
 		  
 <!--    target1   -->		
       <a-entity id="mytarget1" mytarget1 mindar-image-target="targetIndex: 1">
-		
+
+<script>
+    		AFRAME.registerComponent('click-play', {
+  		init: function () {
+      		var v = document.querySelector('#video2’);
+    		this.el.addEventListener('mouseup', function (event) {
+    		//クリック時の処理
+                 v.play();
+        	    		});
+  		}
+		});
+</script>
+		  
 <!--	  <a-plane src="./assets/preview2.png" click-play position="0 0 0.1" height="0.552" width="1" rotation="0 0 0"></a-plane>  -->
 
 	<a-video src="#video2"  width="1" height="0.65"  position="0 0 0" rotation="0 0 0"></a-video> 
