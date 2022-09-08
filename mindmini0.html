@@ -13,9 +13,9 @@
     <script src="https://unpkg.com/aframe-html-shader@0.2.0/dist/aframe-html-shader.js"></script>
     <script src="assets/virtual_tour.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	
-	<script>		  
-AFRAME.registerComponent('movie', {
+
+	<script>
+	  AFRAME.registerComponent('movie', {
   init: function () {
     const el = this.el
 
@@ -35,6 +35,7 @@ AFRAME.registerComponent('movie', {
         movie.pause()
       }
     })
+
     // 動画の読み込みが完了したら動画を再生
     // ただしiPhoneでは自動再生ができないのでクリックする必要がある
     movie.addEventListener("loadeddata", () => {
@@ -43,10 +44,9 @@ AFRAME.registerComponent('movie', {
       movie.play()
     })
   }
-})		  
-		  
-</script>
-  	  
+})
+		</script>
+
 
 </head>	
 
@@ -62,8 +62,7 @@ AFRAME.registerComponent('movie', {
 		<img id="img-left" src="./assets/left.png" />
 		
 		<img id="movie_thumbnail" src="./assets/preview2.png" crossorigin="anonymous">
-    	<video id="movie" muted webkit-playsinline playsinline preload loop="true" src="./assets/video2.mp4"></video>
-
+    	<video id="movie" muted webkit-playsinline playsinline preload loop="true" src="./assets/video2.mp4"></video>			
           	
 	</a-assets>
 
