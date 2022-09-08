@@ -14,26 +14,18 @@
     <script src="assets/virtual_tour.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	  
+<script>
+    		AFRAME.registerComponent('click-play', {
+  		init: function () {
+      		var v = document.querySelector('#video2’);
+    		this.el.addEventListener('mouseup', function (event) {
+    		//クリック時の処理
+                 v.play();
+        	    		});
+  		}
+		});
+</script>
 
-		<script>
-		AFRAME.registerComponent('mytarget1', {
-        init: function () {
-          this.el.addEventListener('targetFound', event => {
-	
-	const video01 = document.getElementById("video2");
-	const btn01 = document.getElementById("my_btn01");
-
-	btn01.addEventListener("click", (e)=>{
-		if(video01.paused){
-			video01.play();
-			e.target.setAttribute("src", "#icon-play");
-		}else{
-			video01.pause();
-			e.target.setAttribute("src", "#img_left");
-		}
-	});
-}
- 		</script>	
 
 </head>	
 
@@ -70,7 +62,7 @@
 <!--	  <a-plane src="./assets/preview2.png" click-play position="0 0 0.1" height="0.552" width="1" rotation="0 0 0"></a-plane>  -->
 
 	<a-video src="#video2"  width="1" height="0.65"  position="0 0 0" rotation="0 0 0"></a-video> 
-	<a-image id="my_btn01" src="#icon-play" position="0 -0.5 0" scale="0.3 0.3 0.3"></a-image>	  
+	<a-image id="my_btn01" src="#icon-play" click-play position="0 -0.5 0" scale="0.3 0.3 0.3"></a-image>	  
 		  	  
 	<a-gltf-model rotation="20 0 0 " position="0 0.4 0" scale="0.05 0.05 0.05" src="#bearModel" animation-mixer>
       
