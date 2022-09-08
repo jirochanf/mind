@@ -1,0 +1,102 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image.prod.js"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image-aframe.prod.js"></script>
+	<script src="https://unpkg.com/aframe-orbit-controls@1.2.0/dist/aframe-orbit-controls.min.js"></script>
+
+    <script src="https://unpkg.com/aframe-event-set-component@5.0.0/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
+    <script src="https://unpkg.com/aframe-html-shader@0.2.0/dist/aframe-html-shader.js"></script>
+    <script src="assets/virtual_tour.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	
+	<script>		  
+AFRAME.registerComponent('movie', {
+  init: function () {
+    const el = this.el
+
+    let isPlayed = false
+    const movie = document.getElementById("movie")
+
+    // a-videoがクリックされたら動画を再生
+    this.el.addEventListener("click", () => {
+      if(!isPlayed) {
+        el.attributes["material"].value = "src: #movie"
+        isPlayed = true
+      }
+
+      if(movie.paused) {
+        movie.play()
+      }else {
+        movie.pause()
+      }
+    })
+
+    // 動画の読み込みが完了したら動画を再生
+    // ただしiPhoneでは自動再生ができないのでクリックする必要がある
+    movie.addEventListener("loadeddata", () => {
+      aVideo.attributes["material"].value = "src: #movie"
+      isPlayed = true
+      movie.play()
+    })
+  }
+})		  
+		  
+</script>
+  	  
+
+</head>	
+
+  <body>
+    <a-scene mindar-image="imageTargetSrc: ./assets/targets2.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+
+	<a-assets>
+		<a-asset-item id="bearModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/bear/scene.gltf"></a-asset-item>
+		<a-asset-item id="raccoonModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/raccoon/scene.gltf"></a-asset-item>
+    	
+	　　
+		<img id="icon-play" src="./assets/play.png" />
+		<img id="img-left" src="./assets/left.png" />
+		
+		<img id="movie_thumbnail" src="./assets/preview2.png" crossorigin="anonymous">
+    	<video id="movie" muted webkit-playsinline playsinline preload loop="true" src="./assets/video2.mp4"></video>
+
+          	
+	</a-assets>
+
+<a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+<!--    target0   -->		
+      <a-entity id="mytarget" mytarget mindar-image-target="targetIndex: 0">
+		  
+<a-gltf-model rotation="0 0 0 " position="-0.3 0.3 0" scale="0.05 0.05 0.05" src="#raccoonModel" animation-mixer>
+
+<a-image id="namecard" src="./assets/meishi.png" position="0.4 0.65 0" height="0.5" width="0.35"></a-image>
+
+	</a-entity>
+		  
+<!--    target1   -->		
+      <a-entity id="mytarget1" mytarget1 mindar-image-target="targetIndex: 1">
+
+ 		  
+<!--	  <a-plane src="./assets/preview2.png" click-play position="0 0 0.1" height="0.552" width="1" rotation="0 0 0"></a-plane>  -->
+
+	<a-video
+    material="src: #movie_thumbnail"
+    width="1"
+    height="0.6"
+    movie
+></a-video>
+		  
+		  	  
+	<a-gltf-model rotation="20 0 0 " position="0 0.4 0" scale="0.05 0.05 0.05" src="#bearModel" animation-mixer>
+      
+		</a-entity>
+    
+		</a-scene>
+	</body>
+</html>
