@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+	  <meta name="apple-mobile-web-app-capable" content="yes">
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image.prod.js"></script>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
@@ -26,20 +27,21 @@
 		
     <a-assets>
        <a-asset-item id="bearModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/bear/scene.gltf"></a-asset-item>
-       <a-asset-item id="raccoonModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/raccoon/scene.gltf"></a-asset-item>
-		  
+       <a-asset-item id="raccoonModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/raccoon/scene.gltf"></a-asset-item>		  
 	   <img id="icon-web" src="./assets/web.png">
-<!--	<video id="mp4” muted webkit-playsinline playsinline loop="true" src=“./“assets/video2.mp4></video> -->
-	  
+	</a-assets>
 
-</a-assets>
+		<a-assets>
+<video id="mp4" muted webkit-playsinline playsinline loop="true" src="./assets/video2.mp4"></video>
+		</a-assets>																					  
+																	
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
 <!-- target0 -->
 <a-entity mindar-image-target="targetIndex: 0">
 
-	<a-video id="mp4" class="clickable" click-play src="./assets/video3.mp4" position="0 0 0" height="0.65" width="1"></a-video>
+	<a-video id="video" class="clickable" click-play src="#mp4" position="0 0 0" height="0.65" width="1"></a-video>
 		  
 	<a-image  src="./assets/title.png" position="0 1 0" height="0.9" width="0.9" link="href: https://netken.info/; title: My Home Page;"></a-image>
 
