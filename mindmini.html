@@ -124,15 +124,15 @@
         init: function () {
           this.el.addEventListener('targetFound', event => {
             console.log("target found");
-  //          showAvatar(() => {
-   //           setTimeout(() => {
+            showAvatar(() => {
+              setTimeout(() => {
                 showPortfolio(() => {
-    //              setTimeout(() => {
-    //                showInfo();
-   //               }, 300);
+                  setTimeout(() => {
+                    showInfo();
+                  }, 300);
                 });
-  //            }, 300);
- //           });
+              }, 300);
+            });
           });
           this.el.addEventListener('targetLost', event => {
             console.log("target found");
@@ -163,14 +163,14 @@
 <!-- target0 -->
 <a-entity id="mytarget0" mitarget0 mindar-image-target="targetIndex: 0">
 
-	<a-video id="video" material="src: #preview1" class="clickable" click-play src="#mp4" position="0 0 0" height="0.65" width="1"></a-video>	
+	<a-video id="video" material="src: #preview1" class="clickable" src="#mp4" position="0 0 0" height="0.65" width="1"></a-video>	
 		  
 
 	<a-image  src="./assets/title.png" position="0 1 0" height="0.9" width="0.9"></a-image>
 
 	<a-gltf-model rotation="0 0 0 " position="0 0.4 0" scale="0.05 0.05 0.05" src="#raccoonModel" animation-mixer></a-gltf-model>
 	
-	<a-image id="paintandquest-preview-button" class="clickable" src="./assets/play.png" alpha-test="0.5" position="0 -1 0" height="0.552" width="1">
+	<a-image id="paintandquest-preview-button" class="clickable" src="./assets/play.png" alpha-test="0.5" position="0 -0.5 0" height="0.2" width="0.2">
               </a-image>
 		  
        </a-entity>
