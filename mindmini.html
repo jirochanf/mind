@@ -18,9 +18,12 @@
 <!--target0 -->
       <a-entity mindar-image-target="targetIndex: 0">
         <a-gltf-model rotation="0 0 0 " position="0 0.4 0" scale="0.05 0.05 0.05" src="#raccoonModel" animation-mixer>
-	<a-image class="clickable" src="./assets/web.png" alpha-test="0.5" position="0 -0.4 0" height="0.552" width="1">
-              </a-image>
-      </a-entity>
+	  	<a-gltf-model>
+	    <a-video 
+				 material="./assets/preview.pmg" src="./assets/video3.mp4” click-play  width="1" height="0.65" position="0 0 0" rotation="0 0 0">
+		</a-video>
+        <a-image class="clickable" src="./assets/web.png" alpha-test="0.5" position="0 -0.4 0" height="0.552" width="1"></a-image>
+	</a-entity>
 
 <!--target1 -->		  
 		<a-entity mindar-image-target="targetIndex: 1">
