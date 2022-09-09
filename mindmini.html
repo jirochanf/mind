@@ -31,11 +31,9 @@
 	   <img id="icon-web" src="./assets/web.png">
 	</a-assets>
 
-		<!--
 		<a-assets>
 <video id="mp4" muted webkit-playsinline playsinline loop="true" src="./assets/video2.mp4"></video>
-		</a-assets>																					  
--->																	
+		</a-assets>																																					
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
@@ -44,12 +42,12 @@
 
 	<a-video id="video" class="clickable" click-play src="#mp4" position="0 0 0" height="0.65" width="1"></a-video>
 		  
+	<a-image class="clickable" src="#icon-web"　position="0 -2 0" height="0.15" width="0.15"
+        		   link="href: https://netken.info/; title: My Home Page;"></a-image>
+
 	<a-image  src="./assets/title.png" position="0 1 0" height="0.9" width="0.9" link="href: https://netken.info/; title: My Home Page;"></a-image>
 
 	<a-gltf-model rotation="0 0 0 " position="0 0.4 0" scale="0.05 0.05 0.05" src="#raccoonModel" animation-mixer></a-gltf-model>
-
-	<a-image class="clickable" src="#icon-web"　position="0 -2 0" height="0.15" width="0.15"
-        		   link="href: https://netken.info/; title: My Home Page;"></a-image>
 		  
        </a-entity>
 
