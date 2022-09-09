@@ -29,6 +29,7 @@
        <a-asset-item id="bearModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/bear/scene.gltf"></a-asset-item>
        <a-asset-item id="raccoonModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/raccoon/scene.gltf"></a-asset-item>		  
 	   <img id="icon-web" src="./assets/web.png">
+		<img id="preview1" src="./assets/preview.png">
 	</a-assets>
 
 		<a-assets>
@@ -40,12 +41,12 @@
 <!-- target0 -->
 <a-entity mindar-image-target="targetIndex: 0">
 
-	<a-video id="video" class="clickable" click-play src="#mp4" position="0 0 0" height="0.65" width="1"></a-video>
+	<a-video id="video" material="src: #preview1" class="clickable" click-play src="#mp4" position="0 0 0" height="0.65" width="1"></a-video>	
 		  
 	<a-image class="clickable" src="#icon-web"　position="0 -2 0" height="0.15" width="0.15"
         		   link="href: https://netken.info/; title: My Home Page;"></a-image>
 
-	<a-image  src="./assets/title.png" position="0 1 0" height="0.9" width="0.9" link="href: https://netken.info/; title: My Home Page;"></a-image>
+	<a-image  src="./assets/title.png" position="0 1 0" height="0.9" width="0.9"></a-image>
 
 	<a-gltf-model rotation="0 0 0 " position="0 0.4 0" scale="0.05 0.05 0.05" src="#raccoonModel" animation-mixer></a-gltf-model>
 		  
