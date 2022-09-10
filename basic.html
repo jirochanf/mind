@@ -23,17 +23,15 @@
     <a-scene mindar-image="imageTargetSrc: ./assets/targets1.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
    
 		<a-assets>
-	<video id="video2” muted webkit-playsinline playsinline loop="true" src=“./assets/video2.mp4">
+	<video id="video2” muted webkit-playsinline playsinline loop="true" src=“./assets/video2.mp4"></video>
 	<img id="preview" src="./assets/preview2.png">
 	<img id="play" src="./assets/play.png">
 
 		<a-asset-item id="3dmodel" src="./3dmodel/trail.gltf"></a-asset-item>
-      </a-assets>
-			
-	<a-assets>
         <a-asset-item id="bearModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/bear/scene.gltf"></a-asset-item>
         <a-asset-item id="raccoonModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/raccoon/scene.gltf"></a-asset-item>
-      </a-assets>
+
+		</a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
@@ -42,7 +40,7 @@
 		  		  
 <a-video material="src:#preview" id="video-mp4" src="#video2" width="1" height="0.552" position="0 0 0" ></a-video>
 	
-<a-image id="icon-play" class="clickable" click-play src="#play" position="0 -0.2 0" height="0.2" width="0.2"></a-image>
+<a-image id="icon-play" class="clickable" click-play src="#play" position="0 -0.4 0" height="0.2" width="0.2"></a-image>
 
 	<a-gltf-model rotation="0 0 0 " position="0 0.35 0" scale="0.05 0.05 0.05" src="#raccoonModel" animation-mixer>
 		
