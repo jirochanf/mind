@@ -7,27 +7,23 @@
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image-aframe.prod.js"></script>
 
 	  <script>
-	  AFRAME.registerComponent('movie', {
-  init: function () {
+const movie = () => {		  
+ init: function () {
     const el = this.el
-
     let isPlayed = false
     const movie = document.getElementById("movie")
-
     // a-videoがクリックされたら動画を再生
     this.el.addEventListener("click", () => {
       if(!isPlayed) {
         el.attributes["material"].value = "src: #movie"
         isPlayed = true
       }
-
       if(movie.paused) {
         movie.play()
       }else {
         movie.pause()
       }
     })
-
     // 動画の読み込みが完了したら動画を再生
     // ただしiPhoneでは自動再生ができないのでクリックする必要がある
     movie.addEventListener("loadeddata", () => {
@@ -37,6 +33,10 @@
     })
   }
 })
+
+AFRAME.registerComponent('mytarget', {
+	movie(() => {
+}}
 	  	  </script>	
 
 	
@@ -58,7 +58,7 @@
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
 <!-- target check -->			
-<a-entity mindar-image-target="targetIndex: 0">
+<a-entity id="mytarget" mytarget mindar-image-target="targetIndex: 0">
 
 <a-video
     material="src: #movie_thumbnail"
@@ -71,7 +71,7 @@
 <!--
 <a-image id="icon-play" class="clickable" src="#play" position="0 -0.4 0" height="0.2" width="0.2"></a-image>
 -->
-	<a-gltf-model rotation="0 0 0 " position="0 0.35 0" scale="0.05 0.05 0.05" src="#raccoonModel" animation-mixer></a-gltf-model>
+	<a-gltf-model rotation="0 0 0 " position="0 0.4 0" scale="0.05 0.05 0.05" src="#raccoonModel" animation-mixer></a-gltf-model>
 		
 </a-entity>
     </a-scene>
