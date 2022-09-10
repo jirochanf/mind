@@ -15,15 +15,14 @@
         	    		});
   		}
 		});
-
-	
+</script>	
 	
 	</head>
   <body>
     <a-scene mindar-image="imageTargetSrc: ./assets/targets1.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
    
 		<a-assets>
-	<video id="video2” muted webkit-playsinline playsinline loop="true" src=“./assets/video2.mp4"></video>
+	<video id="video2” muted webkit-playsinline playsinline loop="true" src=“./assets/video2.mp4">
 	<img id="preview" src="./assets/preview2.png">
 	<a-asset-item id="avatarModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/card-example/softmind/scene.gltf"></a-asset-item>
       </a-assets>
@@ -34,8 +33,7 @@
 <a-video material="src:#preview" id="video-mp4" src="#video2" click-play width="1" height="0.552" position="0 0 0" ></a-video>
 		  
 <a-gltf-model rotation="0 0 0 " position="0 0.4 0.1" scale="0.005 0.005 0.005" src="#avatarModel"
-          animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"><a-gltf-model>	
-
+          animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
 	</a-entity>
     </a-scene>
   </body>
