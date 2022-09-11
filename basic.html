@@ -7,29 +7,6 @@
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image-aframe.prod.js"></script>
 	<script src="./assets/main.js"></script>
-
-<script
-     AFRAME.registerComponent('mytarget', {
-        init: function () {
-          this.el.addEventListener('targetFound', event => {
-            console.log("target found");
-            vplay(() => {
-              setTimeout(() => {
-                showPortfolio(() => {
-                  setTimeout(() => {
-                    showInfo();
-                  }, 300);
-                });
-              }, 300);
-            });
-          });
-          this.el.addEventListener('targetLost', event => {
-            console.log("target found");
-          });
-          //this.el.emit('targetFound');
-        }
-      });
-    </script>
 	  
 </head>
   
@@ -44,14 +21,12 @@
 		<img id="img_play" src="./assets/img_play.png">
 		<img id="img_pause" src="./assets/img_pause.png">
 		<img id="preview" src="./assets/preview.png">
-		<img id="youtube" src="./assets/youtube.png">
-
-	
+		<img id="youtube" src="./assets/youtube.png">	
 	</a-assets>
 
-      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+	<a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
-	<!-- target0 -->
+<!-- target0 -->
 <a-entity id="mytarget" mytarget mindar-image-target="targetIndex: 0">
 	
 <a-image id="my_btn01" class="clickable" src="#img_pause" position="0 -0.5 0" scale="0.3 0.3 0.3"></a-image>
@@ -65,8 +40,6 @@
 <a-image visible="false" class="clickable" src="#youtube" position="0.42 -0.5 0" height="0.15" width="0.15"
 link="href: https://www.youtube.com/channel/UC262c4cdRkfrllw37mpUKOA/videos; title: Senior Travel;"
 ></a-image>
-
-<a-gltf-model rotation="0 0 0 " position="0 0.4 0" scale="0.05 0.05 0.05" src="#raccoonModel" animation-mixer></a-gltf-model>
 			
 </a-entity>
 
