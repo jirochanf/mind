@@ -38,6 +38,30 @@ AFRAME.registerComponent('movie', {
   }
 })
 </script>	
+	  
+<script>
+	  AFRAME.registerComponent('mytarget', {
+        init: function () {
+          this.el.addEventListener('targetFound', event => {
+            console.log("target found");
+ //           showAvatar(() => {
+ //             setTimeout(() => {
+ //               showPortfolio(() => {
+                  movie(() => {
+  //                  showInfo();
+  //                }, 300);
+ //               });
+ //             }, 300);
+//            });
+          });
+          this.el.addEventListener('targetLost', event => {
+            console.log("target found");
+          });
+          //this.el.emit('targetFound');
+        }
+      });
+    </script>
+
 
 	
 	</head>
