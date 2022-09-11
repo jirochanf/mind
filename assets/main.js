@@ -3,7 +3,7 @@
 
 // Window
 
-	const showInfo = () => {
+	const vplay = () => {
 	const video01 = document.getElementById("my_video01");
 	const btn01 = document.getElementById("my_btn01");
 
