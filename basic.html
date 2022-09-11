@@ -52,7 +52,7 @@
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
 	<!-- target0 -->
-<a-entity mindar-image-target="targetIndex: 0">
+<a-entity id="mytarget" mytarget mindar-image-target="targetIndex: 0">
 	
 <a-image id="my_btn01" class="clickable" src="#img_pause" position="0 -0.5 0" scale="0.3 0.3 0.3"></a-image>
 <a-video material="scr:#preview" src="#my_video01" position="0 0 0" rotation="0 0 0" width="1" height="0.6"></a-video>
@@ -60,7 +60,7 @@
 </a-entity>
 	
 <!-- target1 -->  
-<a-entity mindar-image-target="targetIndex: 1">
+<a-entity id="mytarget1" mytarget1 mindar-image-target="targetIndex: 1">
 	
 <a-image visible="false" class="clickable" src="#youtube" position="0.42 -0.5 0" height="0.15" width="0.15"
 link="href: https://www.youtube.com/channel/UC262c4cdRkfrllw37mpUKOA/videos; title: Senior Travel;"
