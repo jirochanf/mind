@@ -7,7 +7,31 @@
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image-aframe.prod.js"></script>
 	<script src="./assets/main.js"></script>
-  </head>
+
+<script
+     AFRAME.registerComponent('mytarget', {
+        init: function () {
+          this.el.addEventListener('targetFound', event => {
+            console.log("target found");
+            vplay(() => {
+              setTimeout(() => {
+                showPortfolio(() => {
+                  setTimeout(() => {
+                    showInfo();
+                  }, 300);
+                });
+              }, 300);
+            });
+          });
+          this.el.addEventListener('targetLost', event => {
+            console.log("target found");
+          });
+          //this.el.emit('targetFound');
+        }
+      });
+    </script>
+	  
+</head>
   
 	<body>    
 <a-scene mindar-image="imageTargetSrc: ./assets/targets2.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
