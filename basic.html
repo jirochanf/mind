@@ -57,7 +57,7 @@ AFRAME.registerComponent('movie', {
 		<video id="movie" src="./assets/video2.mp4" webkit-playsinline playsinline loop="true"></video>
 		<img id="img_play" src="./assets/img_play.png">
 		<img id="img_pause" src="./assets/img_pause.png">
-		<img id="preview" src="./assets/preview.png">
+		<img id="movie_thumbnail" src="./assets/preview.png">
 		<img id="youtube" src="./assets/youtube.png">	
 	</a-assets>
 
@@ -67,7 +67,7 @@ AFRAME.registerComponent('movie', {
 <a-entity id="mytarget" mytarget mindar-image-target="targetIndex: 0">
 	
 <a-image id="my_btn01" class="clickable" click-play src="#img_pause" position="0 -0.5 0" scale="0.2 0.2 0.2"></a-image>
-<a-video material="scr:./assets/preview.png" src="#movie" movie position="0 0 0" rotation="0 0 0" width="1" height="0.6"></a-video>
+<a-video material="scr:#movie_thumbnail" src="#movie" movie position="0 0 0" rotation="0 0 0" width="1" height="0.6"></a-video>
 	
 </a-entity>
 	
