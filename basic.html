@@ -4,7 +4,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 <!-- iOsで動画再生に必須　-->
 	<meta name="apple-mobile-web-app-capable" content="yes">
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image.prod.js"></script>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
@@ -47,9 +46,9 @@ AFRAME.registerComponent('movie', {
 	  
 </head>
   
-	<body>    
-<a-scene mindar-image="imageTargetSrc: ./assets/targets2.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
-      
+<body>    
+<!--<a-scene mindar-image="imageTargetSrc: ./assets/targets2.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false"> -->
+<a-scene>      
 	<a-assets>
         <a-asset-item id="bearModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/bear/scene.gltf"></a-asset-item>
         <a-asset-item id="raccoonModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/raccoon/scene.gltf"></a-asset-item>
@@ -64,9 +63,9 @@ AFRAME.registerComponent('movie', {
 
 	<a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
-<!-- target0 -->
+<!-- target0 
 <a-entity id="mytarget" mytarget mindar-image-target="targetIndex: 0">
-	
+-->	
 <a-video
     material="src: #movie_thumbnail"
     width="1"
@@ -80,9 +79,9 @@ link="href: https://www.youtube.com/channel/UC262c4cdRkfrllw37mpUKOA/videos; tit
 ></a-image>
 	
 	
-</a-entity>
+<!--</a-entity>
 	
-<!-- target1 -->  
+ target1 
 <a-entity id="mytarget1" mytarget1 mindar-image-target="targetIndex: 1">
 	
 <a-image visible="false" class="clickable" src="#youtube" position="0.42 -0.5 0" height="0.15" width="0.15"
@@ -90,7 +89,7 @@ link="href: https://www.youtube.com/channel/UC262c4cdRkfrllw37mpUKOA/videos; tit
 ></a-image>
 			
 </a-entity>
-
+-->  
 </a-scene>
   </body>
 </html>
