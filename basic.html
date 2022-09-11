@@ -13,17 +13,37 @@
 	<script src="./assets/main.js"></script>
 	  
 	  <script>
-    		AFRAME.registerComponent('click-play', {
-  		init: function () {
-      		var v = document.querySelector('#my_video01’);
-    		this.el.addEventListener('mouseup', function (event) {
-    		//クリック時の処理
-                 v.play();
-        	    		});
-  		}
-		});
-</script>
+AFRAME.registerComponent('movie', {
+  init: function () {
+    const el = this.el
 
+    let isPlayed = false
+    const movie = document.getElementById("movie")
+
+    // a-videoがクリックされたら動画を再生
+    this.el.addEventListener("click", () => {
+      if(!isPlayed) {
+        el.attributes["material"].value = "src: #movie"
+        isPlayed = true
+      }
+
+      if(movie.paused) {
+        movie.play()
+      }else {
+        movie.pause()
+      }
+    })
+
+    // 動画の読み込みが完了したら動画を再生
+    // ただしiPhoneでは自動再生ができないのでクリックする必要がある
+    movie.addEventListener("loadeddata", () => {
+      aVideo.attributes["material"].value = "src: #movie"
+      isPlayed = true
+      movie.play()
+    })
+  }
+})
+</script>
 	  
 </head>
   
@@ -34,7 +54,7 @@
         <a-asset-item id="bearModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/bear/scene.gltf"></a-asset-item>
         <a-asset-item id="raccoonModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/raccoon/scene.gltf"></a-asset-item>
 		
-		<video id="my_video01" src="./assets/video2.mp4" webkit-playsinline playsinline loop="true"></video>
+		<video id="movie" src="./assets/video2.mp4" webkit-playsinline playsinline loop="true"></video>
 		<img id="img_play" src="./assets/img_play.png">
 		<img id="img_pause" src="./assets/img_pause.png">
 		<img id="preview" src="./assets/preview.png">
@@ -47,7 +67,7 @@
 <a-entity id="mytarget" mytarget mindar-image-target="targetIndex: 0">
 	
 <a-image id="my_btn01" class="clickable" click-play src="#img_pause" position="0 -0.5 0" scale="0.2 0.2 0.2"></a-image>
-<a-video material="scr:./assets/preview.png" src="#my_video01" position="0 0 0" rotation="0 0 0" width="1" height="0.6"></a-video>
+<a-video material="scr:./assets/preview.png" src="#my_video01" movie position="0 0 0" rotation="0 0 0" width="1" height="0.6"></a-video>
 	
 </a-entity>
 	
