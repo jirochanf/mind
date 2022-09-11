@@ -54,10 +54,11 @@ AFRAME.registerComponent('movie', {
         <a-asset-item id="bearModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/bear/scene.gltf"></a-asset-item>
         <a-asset-item id="raccoonModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/raccoon/scene.gltf"></a-asset-item>
 		
-		<video id="movie" src="./assets/video2.mp4" webkit-playsinline playsinline loop="true"></video>
+		<img id="movie_thumbnail" src="/assets/preview.png" crossorigin="anonymous">
+    <video id="movie" muted webkit-playsinline playsinline preload loop="true" src="/assets/video2.mp4"></video>
+
 		<img id="img_play" src="./assets/img_play.png">
 		<img id="img_pause" src="./assets/img_pause.png">
-		<img id="movie_thumbnail" src="./assets/preview.png">
 		<img id="youtube" src="./assets/youtube.png">	
 	</a-assets>
 
@@ -66,8 +67,17 @@ AFRAME.registerComponent('movie', {
 <!-- target0 -->
 <a-entity id="mytarget" mytarget mindar-image-target="targetIndex: 0">
 	
-<a-image id="my_btn01" class="clickable" click-play src="#img_pause" position="0 -0.5 0" scale="0.2 0.2 0.2"></a-image>
-<a-video material="scr:#movie_thumbnail" src="#movie" movie position="0 0 0" rotation="0 0 0" width="1" height="0.6"></a-video>
+<a-video
+    material="src: #movie_thumbnail"
+    width="1"
+    height="0.6"
+	position="0 0 0"	 
+    movie
+></a-video>
+<a-image visible="false" class="clickable" src="#youtube" position="0.42 -0.5 0" height="0.15" width="0.15"
+link="href: https://www.youtube.com/channel/UC262c4cdRkfrllw37mpUKOA/videos; title: Senior Travel;"
+></a-image>
+	
 	
 </a-entity>
 	
