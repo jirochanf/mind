@@ -119,7 +119,7 @@
         }, 10);
       }
 
-      //3Dモデル  表示部
+/*3Dモデル  表示部
       const showAvatar = (onDone) => {
         const avatar = document.querySelector("#avatar");
         let z = -0.3;
@@ -132,7 +132,7 @@
           avatar.setAttribute("position", "0 1.25 " + z);
         }, 10);
       }
-   
+ */  
       //  Aframeでターゲットを摘出 
       AFRAME.registerComponent('mytarget', {
         init: function () {
@@ -340,7 +340,7 @@
 		
 <a-plane src="./assets/preview2.png" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
 
-<a-gltf-model rotation="0 0 0 " position="-0.3 0.3 0" scale="0.05 0.05 0.05" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/raccoon/scene.gltf" animation-mixer>
+<a-gltf-model rotation="0 0 0 " position="-0.3 0.5 0" scale="0.05 0.05 0.05" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/raccoon/scene.gltf" animation-mixer>
   
 </a-entity>
 	 
