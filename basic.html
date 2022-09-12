@@ -47,14 +47,14 @@ AFRAME.registerComponent('movie', {
 </head>
   
 <body>    
-<!--<a-scene mindar-image="imageTargetSrc: ./assets/targets2.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false"> -->
-<a-scene>      
+<a-scene mindar-image="imageTargetSrc: ./assets/targets2.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+    
 	<a-assets>
         <a-asset-item id="bearModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/bear/scene.gltf"></a-asset-item>
         <a-asset-item id="raccoonModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/raccoon/scene.gltf"></a-asset-item>
 		
-		<img id="movie_thumbnail" src="/assets/preview.png" crossorigin="anonymous">
-    <video id="movie" muted webkit-playsinline playsinline preload loop="true" src="/assets/video2.mp4"></video>
+<img id="movie_thumbnail" src="/assets/preview.png" crossorigin="anonymous">
+<video id="movie" muted webkit-playsinline playsinline preload loop="true" src="/assets/video2.mp4"></video>
 
 		<img id="img_play" src="./assets/img_play.png">
 		<img id="img_pause" src="./assets/img_pause.png">
@@ -63,9 +63,9 @@ AFRAME.registerComponent('movie', {
 
 	<a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
-<!-- target0 
+<!-- target0  -->	 
 <a-entity id="mytarget" mytarget mindar-image-target="targetIndex: 0">
--->	
+
 <a-video
     material="src: #movie_thumbnail"
     width="1"
@@ -78,10 +78,9 @@ AFRAME.registerComponent('movie', {
 link="href: https://www.youtube.com/channel/UC262c4cdRkfrllw37mpUKOA/videos; title: Senior Travel;"
 ></a-image>
 	
+</a-entity>
 	
-<!--</a-entity>
-	
- target1 
+<!-- target1 -->
 <a-entity id="mytarget1" mytarget1 mindar-image-target="targetIndex: 1">
 	
 <a-image visible="false" class="clickable" src="#youtube" position="0.42 -0.5 0" height="0.15" width="0.15"
@@ -89,7 +88,7 @@ link="href: https://www.youtube.com/channel/UC262c4cdRkfrllw37mpUKOA/videos; tit
 ></a-image>
 			
 </a-entity>
--->  
+ 
 </a-scene>
   </body>
 </html>
