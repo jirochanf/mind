@@ -134,7 +134,7 @@
       }
    
       //  Aframeでターゲットを摘出 
-      AFRAME.registerComponent('mytarget1', {
+      AFRAME.registerComponent('mytarget', {
         init: function () {
           this.el.addEventListener('targetFound', event => {
             console.log("target found");
@@ -292,7 +292,9 @@
             </a-entity>
             <a-image visible=false id="portfolio-left-button" class="clickable" src="#icon-left" position="-0.7 0 0" height="0.15" width="0.15"></a-image>
             <a-image visible=false id="portfolio-right-button" class="clickable" src="#icon-right" position="0.7 0 0" height="0.15" width="0.15"></a-image>
-          </a-entity>			
+          </a-entity>
+		  
+		  <!-- パネル外　-->
           <a-image visible=false id="profile-button" class="clickable" src="#icon-profile" position="-0.42 -0.5 0" height="0.15" width="0.15"
             animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
           ></a-image>
@@ -310,7 +312,7 @@
           ></a-image>
 
 		  <!-- 名刺画像-->
-		  <a-image visible="false"  id="namecard" class="clickable" src="./assets/meishi.png" position="0.4 0.65 0" height="0.5" width="0.35"></a-image>
+		  <a-image visible="false"  id="namecard" class="clickable" src="./assets/meishi.png" position="0.4 0.65 0" height="0.5" width="0.35"　link="href: https://www.youtube.com/channel/UC262c4cdRkfrllw37mpUKOA/videos; title: Senior Travel;"></a-image>
 		  <!-- walk aroud-->		  
 			<a-image  src="./assets/title.png" position="-0.25 0.5 0" height="0.9" width="0.9"></a-image>		
 		  <!-- 3dmodel trail-->	
@@ -338,7 +340,9 @@
             </a-entity>
             <a-image visible=false id="portfolio-left-button" class="clickable" src="#icon-left" position="-0.7 0 0" height="0.15" width="0.15"></a-image>
             <a-image visible=false id="portfolio-right-button" class="clickable" src="#icon-right" position="0.7 0 0" height="0.15" width="0.15"></a-image>
-          </a-entity>			
+          </a-entity>
+	
+	
           <a-image visible=false id="profile-button" class="clickable" src="#icon-profile" position="-0.42 -0.5 0" height="0.15" width="0.15"
             animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
           ></a-image>
@@ -354,9 +358,9 @@
             animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
 				   link="href: https://www.youtube.com/channel/UC262c4cdRkfrllw37mpUKOA/videos; title: Senior Travel;"
           ></a-image>
-
 		  <!-- 名刺画像-->
 		  <a-image visible="false"  id="namecard" class="clickable" src="./assets/meishi.png" position="0.4 0.65 0" height="0.5" width="0.35"></a-image>
+
 		  <!-- walk aroud-->		  
 			<a-image  src="./assets/title.png" position="-0.25 0.5 0" height="0.9" width="0.9"></a-image>		
 		  <!-- 3dmodel trail-->	
