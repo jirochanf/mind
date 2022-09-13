@@ -160,12 +160,7 @@
         }
       });
 		
-		
-	const playvideo = (done) => {
-			 btn01.addEventListener("click", (e)=>{
-          console.log("target found");
- 		  });
-	}
+
 			  
 
 		
@@ -173,7 +168,10 @@
       AFRAME.registerComponent('mytarget1', {
         init: function () {
           this.el.addEventListener('targetFound', event => {
-            playvideo();
+		btn01.addEventListener("click", (e)=>{
+          console.log("click sareta");
+ 		  });
+	}
  		  });
           this.el.addEventListener('targetLost', event => {
             console.log("target found");
