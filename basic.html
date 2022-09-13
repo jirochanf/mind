@@ -112,16 +112,20 @@
                 document.querySelector("#paintandquest-video-webm").play();
               }
             });
-			  
+
+	
+			  const playvideo = (done) => {
 			 btn01.addEventListener("click", (e)=>{
-	if(document.querySelector("#paintandquest-video-mp4").paused){// 動画が停止しているかどうかを判定
-		document.querySelector("#paintandquest-video-mp4").play();// 動画を再生
+	if(video01.paused){// 動画が停止しているかどうかを判定
+		video01.play();// 動画を再生
 		e.target.setAttribute("src", "#img_play");// ボタンの画像を変更
 	}else{
-		document.querySelector("#paintandquest-video-mp4").pause();// 動画を停止
+		video01.pause();// 動画を停止
 		e.target.setAttribute("src", "#img_pause");// ボタンの画像を変更
 	}
 }); 
+			  }
+			  
 			  
 	
             setTimeout(() => {
@@ -160,7 +164,8 @@
                 });
               }, 300);
  //           });
-          });
+          playvideo();
+		  });
           this.el.addEventListener('targetLost', event => {
             console.log("target found");
           });
