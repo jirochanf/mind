@@ -152,7 +152,6 @@
                 });
               }, 300);
  //           });
-          playvideo();
 		  });
           this.el.addEventListener('targetLost', event => {
             console.log("target found");
@@ -164,21 +163,17 @@
 		
 	const playvideo = (done) => {
 			 btn01.addEventListener("click", (e)=>{
-	if(video01.paused){// 動画が停止しているかどうかを判定
-		video01.play();// 動画を再生
-		e.target.setAttribute("src", "#img_play");// ボタンの画像を変更
-	}else{
-		video01.pause();// 動画を停止
-		e.target.setAttribute("src", "#img_pause");// ボタンの画像を変更
+          console.log("target found");
+ 		  });
 	}
-}); 
-			  }
+			  
 
+		
 	     //  Aframeでターゲットを摘出 
       AFRAME.registerComponent('mytarget1', {
         init: function () {
           this.el.addEventListener('targetFound', event => {
-            console.log("target found");
+            playvideo();
  		  });
           this.el.addEventListener('targetLost', event => {
             console.log("target found");
