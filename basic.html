@@ -113,9 +113,6 @@
             });
 
 	
-			  
-			  
-	
             setTimeout(() => {
               done();
             }, 500);
@@ -138,7 +135,7 @@
         }, 10);
       }
  */  
-      //  Aframeでターゲットを摘出 
+      //  Aframeでターゲット0を摘出 
       AFRAME.registerComponent('mytarget', {
         init: function () {
           this.el.addEventListener('targetFound', event => {
@@ -160,20 +157,17 @@
         }
       });
 		
-
-			  
-
-		
-	     //  Aframeでターゲットを摘出 
+	
+	     //  Aframeでターゲット1を摘出 
 		     AFRAME.registerComponent('mytarget1', {
         init: function () {
           this.el.addEventListener('targetFound', event => {
-            console.log("target found");
+            console.log("target get");
  //           showAvatar(() => {
  //             setTimeout(() => {
  //               showPortfolio(() => {
  //                 setTimeout(() => {
-                    showPortfolio();
+ //                   showPortfolio();
  //                 }, 300);
  //               });
  //             }, 300);
