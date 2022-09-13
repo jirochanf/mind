@@ -114,17 +114,6 @@
             });
 
 	
-			  const playvideo = (done) => {
-			 btn01.addEventListener("click", (e)=>{
-	if(video01.paused){// 動画が停止しているかどうかを判定
-		video01.play();// 動画を再生
-		e.target.setAttribute("src", "#img_play");// ボタンの画像を変更
-	}else{
-		video01.pause();// 動画を停止
-		e.target.setAttribute("src", "#img_pause");// ボタンの画像を変更
-	}
-}); 
-			  }
 			  
 			  
 	
@@ -172,6 +161,47 @@
           //this.el.emit('targetFound');
         }
       });
+		
+		
+	const playvideo = (done) => {
+			 btn01.addEventListener("click", (e)=>{
+	if(video01.paused){// 動画が停止しているかどうかを判定
+		video01.play();// 動画を再生
+		e.target.setAttribute("src", "#img_play");// ボタンの画像を変更
+	}else{
+		video01.pause();// 動画を停止
+		e.target.setAttribute("src", "#img_pause");// ボタンの画像を変更
+	}
+}); 
+			  }
+
+	     //  Aframeでターゲットを摘出 
+      AFRAME.registerComponent('mytarget', {
+        init: function () {
+          this.el.addEventListener('targetFound', event => {
+            console.log("target found");
+ //           showAvatar(() => {
+ //             setTimeout(() => {
+ //               showPortfolio(() => {
+ //                 setTimeout(() => {
+                    playvideo();
+ //                 }, 300);
+//                });
+ //             }, 300);
+ //           });
+		  });
+          this.el.addEventListener('targetLost', event => {
+            console.log("target found");
+          });
+          //this.el.emit('targetFound');
+        }
+      });
+		
+		
+		
+		
+		
+		
     </script>
 
 <!- スタイル定義  -->    
