@@ -165,17 +165,25 @@
 
 		
 	     //  Aframeでターゲットを摘出 
-      AFRAME.registerComponent('mytarget1', {
+		     AFRAME.registerComponent('mytarget1', {
         init: function () {
           this.el.addEventListener('targetFound', event => {
-		btn01.addEventListener("click", (e)=>{
-          console.log("click sareta");
-	 		  });
+            console.log("target found");
+ //           showAvatar(() => {
+ //             setTimeout(() => {
+ //               showPortfolio(() => {
+ //                 setTimeout(() => {
+                    showPortfolio();
+ //                 }, 300);
+ //               });
+ //             }, 300);
+ //           });
+		  });
           this.el.addEventListener('targetLost', event => {
             console.log("target found");
           });
           //this.el.emit('targetFound');
-        }};
+        }
       });
 		
 		
