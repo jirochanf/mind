@@ -248,7 +248,8 @@
 
   <!-- ARシーン定義　-->
   <a-scene mindar-image="imageTargetSrc: ./assets/targets2.mind; showStats: false; uiScanning: #example-scanning-overlay;" embedded color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
-        <a-assets>
+ 
+	  <a-assets>
           <img id="card" src="./assets/meishi.png" />
           <img id="icon-web" src="./assets/web.png" />
           <img id="icon-location" src="./assets/youtube.png" />
@@ -277,8 +278,6 @@
 
             <a-entity visible=false id="portfolio-panel" position="0 0 -0.01">
  
-  <!--   <a-text value="Portfolio" color="black" align="center" width="2" position="0 0.4 0"></a-text>   -->
-
   <!--  ポートフォリオ表示部　  -->
             <a-entity id="portfolio-item0">
               <a-video id="paintandquest-video-link" webkit-playsinline playsinline width="1" height="0.552" position="0 0 0"></a-video>
@@ -317,8 +316,6 @@
 				   link="href: https://www.youtube.com/channel/UC262c4cdRkfrllw37mpUKOA/videos; title: Senior Travel;"
           ></a-image>
 
-<!-- <a-text value="Hi!  I'm Jiro." color="red" align="center" width="2" position="-0.32 -0.65 0"></a-text> -->
-			
 	<a-image visible="false"  id="namecard" class="clickable" src="./assets/meishi.png" position="0.4 0.65 0" height="0.5" width="0.35"></a-image>		
 			
 	<a-image  src="./assets/title.png" position="-0.25 0.5 0" height="0.9" width="0.9"></a-image>		
@@ -338,16 +335,14 @@
 <!-- target1 を確認後-->	  
 <a-entity id="mytarget1" mitarget1 mindar-image-target="targetIndex: 1">
 		
-<a-plane src="./assets/preview2.png" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
-
+<a-plane src="./assets/preview2.png" position="0 0 -0.01" height="0.552" width="1" rotation="0 0 0"></a-plane>
+ <a-video id="paintandquest-video-link" webkit-playsinline playsinline width="1" height="0.552" position="0 0 0"></a-video>
+ 
 <a-gltf-model rotation="0 0 0 " position="-0.3 0.5 0" scale="0.05 0.05 0.05" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/raccoon/scene.gltf" animation-mixer>
   
 </a-entity>
 	 
-	 
-	 
 	 </a-scene>
-		
 		
     </div>
   </body>
