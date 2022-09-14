@@ -39,7 +39,8 @@
           namecard.setAttribute("visible", true);
         }, 10);
 
-/*        let currentTab = '';
+/*
+let currentTab = '';
         webButton.addEventListener('click', function (evt) {
           text.setAttribute("value", "https://softmind.tech");
           currentTab = 'web';
@@ -62,7 +63,8 @@
           if (currentTab === 'web') {
             window.location.href="https://softmind.tech";
           }
-        });*/
+        });
+*/
       }
 
 
@@ -182,7 +184,7 @@
 		setTimeout(() => {
           namecard2.setAttribute("visible", true);
         }, 10);
-
+		  }
 
         //ポートフォリオ表示部　     
         const showPortfolio2 = (done) => {
@@ -236,7 +238,8 @@
             }, 500);
           }
           portfolio2.setAttribute("position", "0 " + 0 + " -0.01");
-        }, 10);  
+        }, 10);
+		}
 			
      //  Aframeでターゲット1を摘出 
       AFRAME.registerComponent('mytarget1', {
@@ -259,7 +262,7 @@
           //this.el.emit('targetFound');
         }
       });
-	  </script>
+</script>
 
 <!- スタイル定義  -->    
     <style>
