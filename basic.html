@@ -224,11 +224,11 @@ let currentTab = '';
               const testVideo = document.createElement( "video" );
               const canplayWebm = testVideo.canPlayType( 'video/webm; codecs="vp8, vorbis"' );
               if (canplayWebm == "") {
-                document.querySelector("#paintandquest-video-link2").setAttribute("src", "#paintandquest-video-mp42");
-                document.querySelector("#paintandquest-video-mp42").play();
+                document.querySelector("#paintandquest-video-link2").setAttribute("src", "#paintandquest-video2-mp4");
+                document.querySelector("#paintandquest-video2-mp4").play();
               } else {
-                document.querySelector("#paintandquest-video-link2").setAttribute("src", "#paintandquest-video-webm2");
-                document.querySelector("#paintandquest-video-webm2").play();
+                document.querySelector("#paintandquest-video-link2").setAttribute("src", "#paintandquest-video2-webm");
+                document.querySelector("#paintandquest-vide2o-webm").play();
               }
             });
 
@@ -386,8 +386,8 @@ let currentTab = '';
           <img id="icon-left2" src="./assets/left.png" />
           <img id="icon-right2" src="./assets/right.png" />
           <img id="paintandquest-preview2" src="./assets/preview2.png" />
-          <video id="paintandquest-video-mp42" autoplay="false" loop="true" src="./assets/video2.mp4"></video>
-          <video id="paintandquest-video-webm2" autoplay="false" loop="true" src="./assets/paintandquest.webm"></video>
+          <video id="paintandquest-video2-mp4" autoplay="false" loop="true" src="./assets/video2.mp4"></video>
+          <video id="paintandquest-video2-webm" autoplay="false" loop="true" src="./assets/paintandquest.webm"></video>
 		<video id="video02" muted webkit-playsinline playsinline loop="true" src="./assets/video2.mp4"></video>
  		  <img id="coffeemachine-preview2" src="./assets/alubum1.jpeg" />
           <img id="peak-preview2" src="./assets/alubum2.jpeg" />
