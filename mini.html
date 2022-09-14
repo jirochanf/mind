@@ -36,7 +36,26 @@ AFRAME.registerComponent('movie', {
     })
   }
 })	  
-</script>	  
+</script>
+	 
+<script>
+	      AFRAME.registerComponent('mytarget', {
+        init: function () {
+          this.el.addEventListener('targetFound', event => {
+            console.log("target found");
+                     movie();
+                  }, 300);
+                });
+              }, 300);
+ //           });
+		  });
+          this.el.addEventListener('targetLost', event => {
+            console.log("target found");
+          });
+          //this.el.emit('targetFound');
+        }
+      });
+	</script>
 	  
 	</head>
 
@@ -53,12 +72,12 @@ AFRAME.registerComponent('movie', {
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
 <!--ターゲット確認後-->      
-<a-entity mindar-image-target="targetIndex: 0">
+<a-entity id="mytarget" mytarget mindar-image-target="targetIndex: 0">
 			
 <a-video
     material="src: #movie_thumbnail"
-    width="16"
-    height="9"
+    width="1"
+    height="0.6"
     movie
 ></a-video>			
 			
