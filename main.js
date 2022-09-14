@@ -70,33 +70,9 @@
             });
 
 	
-            setTimeout(() => {
+            setTimeout2(() => {
               done();
             }, 500);
           }
           portfolio2.setAttribute("position", "0 " + 0 + " -0.01");
-        }, 10);
-      }
-
-      //  Aframeでターゲット0を摘出 
-      AFRAME.registerComponent('mytarget1', {
-        init: function () {
-          this.el.addEventListener('targetFound', event => {
-            console.log("target found");
- //           showAvatar(() => {
-              setTimeout(() => {
-                showPortfolio(() => {
-                  setTimeout(() => {
-                    showInfo();
-                  }, 300);
-                });
-              }, 300);
- //           });
-		  });
-          this.el.addEventListener('targetLost', event => {
-            console.log("target found");
-          });
-          //this.el.emit('targetFound');
-        }
-      });
-	  
+        }, 10);  

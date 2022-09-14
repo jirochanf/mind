@@ -11,7 +11,7 @@
 	<script src="https://unpkg.com/aframe-orbit-controls@1.2.0/dist/aframe-orbit-controls.min.js"></script>
 	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
 	<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>	  
-	<script src="./assets/main.js"></script>  
+	<script src="./main.js"></script>  
 	
 
 <!--  プロファイル　　スクリプト　　-->
@@ -157,6 +157,32 @@
           //this.el.emit('targetFound');
         }
       });
+		
+     //  Aframeでターゲット1を摘出 
+      AFRAME.registerComponent('mytarget1', {
+        init: function () {
+          this.el.addEventListener('targetFound', event => {
+            console.log("target found");
+ //           showAvatar(() => {
+              setTimeout2(() => {
+                showPortfolio2(() => {
+                  setTimeout2(() => {
+                    showInfo2();
+                  }, 300);
+                });
+              }, 300);
+ //           });
+		  });
+          this.el.addEventListener('targetLost', event => {
+            console.log("target found");
+          });
+          //this.el.emit('targetFound');
+        }
+      });
+		
+		
+		
+		
 </script>
 
 <!- スタイル定義  -->    
