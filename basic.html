@@ -147,9 +147,9 @@ let currentTab = '';
                 showPortfolio(() => {
                   setTimeout(() => {
                     showInfo();
-                  }, 300);
+                  }, 600);
                 });
-              }, 300);
+              }, 600);
  //           });
 		  });
           this.el.addEventListener('targetLost', event => {
@@ -248,13 +248,13 @@ let currentTab = '';
           this.el.addEventListener('targetFound', event => {
             console.log("target1 mituketa");
  //           showAvatar(() => {
- //             setTimeout2(() => {
+             setTimeout2(() => {
                 showPortfolio2(() => {
- //                 setTimeout2(() => {
+                 setTimeout2(() => {
                     showInfo2();
- //                 }, 300);
+                 }, 300);
                 });
-//              }, 300);
+              }, 300);
  //           });
 		  });
           this.el.addEventListener('targetLost', event => {
