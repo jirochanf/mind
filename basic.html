@@ -236,11 +236,12 @@
           }
           portfolio2.setAttribute("position", "0 " + 0 + " -0.01");
         }, 10);  
+			
      //  Aframeでターゲット1を摘出 
       AFRAME.registerComponent('mytarget1', {
         init: function () {
           this.el.addEventListener('targetFound', event => {
-            console.log("target found");
+            console.log("target1 mituketa");
  //           showAvatar(() => {
               setTimeout2(() => {
                 showPortfolio2(() => {
@@ -256,11 +257,7 @@
           });
           //this.el.emit('targetFound');
         }
-      });
-		
-		
-		
-		
+      });	
 </script>
 
 <!- スタイル定義  -->    
@@ -374,7 +371,7 @@
           <img id="peak-preview" src="./assets/alubum2.jpeg" />
 
 <!--targer1用-->
-         <img id="card2" src="./assets/meishi2.png" />
+         <img id="card2" src="./assets/meishi2.jpg" />
           <img id="icon-web2" src="./assets/web.png" />
           <img id="icon-location2" src="./assets/youtube.png" />
           <img id="icon-profile2" src="./assets/kao2.png" />
