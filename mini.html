@@ -8,7 +8,7 @@
 
 	  <script>
 		  const movie = document.querySelector("#movie");
-    		AFRAME.registerComponent("click-play", {
+  AFRAME.registerComponent("click-play", {
   		init: function () {
   //    		var v = document.querySelector(#movie");
     		this.el.addEventListener("mouseup", function (event) {
@@ -17,12 +17,25 @@
         	    		});
 		}
 		});
+		  
+     AFRAME.registerComponent('mytarget', {
+        init: function () {
+          this.el.addEventListener('targetFound', event => {
+            console.log("target found");
+                    click-play();
+          });
+          this.el.addEventListener('targetLost', event => {
+            console.log("target found");
+          });
+        }
+      });		  
+		  
 </script>
 	  
 	</head>
 
 	<body>
-<a-scene mindar-image="imageTargetSrc: ./assets/targets2.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+<a-scene id="mytarget" mytarget mindar-image="imageTargetSrc: ./assets/targets2.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
     
 		<a-assets>
 		
