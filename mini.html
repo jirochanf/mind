@@ -22,6 +22,7 @@
  
 	  <a-assets>
           <img id="card" src="./assets/meishi.png" />
+			<img id="card2" src="./assets/meishi2.jpg" />		  
           <img id="icon-web" src="./assets/web.png" />
           <img id="icon-location" src="./assets/youtube.png" />
           <img id="icon-profile" src="./assets/kao2.png" />
@@ -44,19 +45,16 @@
           </a-camera>
 
  <!-- target0 確認後-->
-	 
-	 
-	 
-	 
-	 
-	  <a-entity id="mytarget" mytarget mindar-image-target="targetIndex: 0">
-		  <a-image visible="false"  id="namecard2" class="clickable" src="./assets/meishi2.jpg" position="0.4 0.65 0" height="0.5" width="0.35"></a-image>	
+<a-entity id="mytarget" mytarget mindar-image-target="targetIndex: 0">
+
+<a-image visible="false"  id="namecard2" class="clickable" src="#card2" position="0.4 0.65 0" height="0.5" width="0.35"></a-image>	
 	
 <a-gltf-model rotation="0 0 0 " position="-0.3 0.5 0" scale="0.05 0.05 0.05" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/raccoon/scene.gltf" animation-mixer></a-gltf-model>
 
 <!-- target1 を確認後-->	  
 <a-entity id="mytarget1" mytarget1 mindar-image-target="targetIndex: 1">
-            <a-entity visible="false" id="panel" position="0 0 -0.01">
+	
+<a-entity visible="false" id="panel" position="0 0 -0.01">
  
   <!--  ポートフォリオ表示部　  -->
             <a-entity id="panel-item0">
