@@ -21,8 +21,7 @@
         const webButton = document.querySelector("#web-button");
         const emailButton = document.querySelector("#email-button");
         const locationButton = document.querySelector("#location-button");
-        const text = document.querySelector("#text");
-		const namecard = document.querySelector("#namecard");
+		  const namecard = document.querySelector("#namecard");
 
 		  
         profileButton.setAttribute("visible", true);
@@ -145,12 +144,12 @@
           <img id="icon-play" src="./assets/play.png" />
           <img id="icon-left" src="./assets/left.png" />
           <img id="icon-right" src="./assets/right.png" />
-          <img id="paintandquest-preview" src="./assets/preview.png" />
+          <img id="preview" src="./assets/preview.png" />
           <video id="video-mp4" autoplay="false" loop="true" src="./assets/video3.mp4"></video>
           <video id="video-webm" autoplay="false" loop="true" src="./assets/paintandquest.webm"></video>
 		<video id="my_video01" muted webkit-playsinline playsinline loop="true" src="./assets/video2.mp4"></video>
- 		  <img id="coffeemachine-preview" src="./assets/alubum1.jpeg" />
-          <img id="peak-preview" src="./assets/alubum2.jpeg" />
+ 		  <img id="preview2" src="./assets/alubum1.jpeg" />
+          <img id="preview3" src="./assets/alubum2.jpeg" />
 
 <!--targer1用-->
          <img id="card2" src="./assets/meishi2.jpg" />
@@ -174,15 +173,15 @@
   <!--  ポートフォリオ表示部　  -->
             <a-entity id="panel-item0">
               <a-video id="video-link" webkit-playsinline playsinline width="1" height="0.552" position="0 0 0"></a-video>
-              <a-image id="preview-button" class="clickable" src="#paintandquest-preview" alpha-test="0.5" position="0 0 0" height="0.552" width="1">
+              <a-image id="preview-button" class="clickable" src="#preview" alpha-test="0.5" position="0 0 0" height="0.552" width="1">
               </a-image>
             </a-entity>
             <a-entity id="panel-item1" visible="false">
-              <a-image class="clickable" src="#coffeemachine-preview" alpha-test="0.5" position="0 0 0" height="0.552" width="1">
+              <a-image class="clickable" src="#preview2" alpha-test="0.5" position="0 0 0" height="0.552" width="1">
               </a-image>
             </a-entity>
             <a-entity id="panel-item2" visible="false">
-              <a-image class="clickable" src="#peak-preview" alpha-test="0.5" position="0 0 0" height="0.552" width="1">
+              <a-image class="clickable" src="#preview3" alpha-test="0.5" position="0 0 0" height="0.552" width="1">
               </a-image>
             </a-entity>
 
