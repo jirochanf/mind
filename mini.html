@@ -9,7 +9,6 @@
 AFRAME.registerComponent('movie', {
   init: function () {
     const el = this.el
-
     let isPlayed = false
     const movie = document.getElementById("movie")
 
@@ -19,14 +18,12 @@ AFRAME.registerComponent('movie', {
         el.attributes["material"].value = "src: #movie"
         isPlayed = true
       }
-
       if(movie.paused) {
         movie.play()
       }else {
         movie.pause()
       }
     })
-
     // 動画の読み込みが完了したら動画を再生
     // ただしiPhoneでは自動再生ができないのでクリックする必要がある
     movie.addEventListener("loadeddata", () => {
@@ -35,7 +32,8 @@ AFRAME.registerComponent('movie', {
       movie.play()
     })
   }
-})	  
+})	
+/*	
 AFRAME.registerComponent('mytarget', {
         init: function () {
           this.el.addEventListener('targetFound', event => {
@@ -47,6 +45,7 @@ AFRAME.registerComponent('mytarget', {
         }
       )}
 								   });
+								   */
 	</script>
 	  
 	</head>
@@ -64,7 +63,7 @@ AFRAME.registerComponent('mytarget', {
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
 <!--ターゲット確認後-->      
-<a-entity id="mytarget" mytarget mindar-image-target="targetIndex: 0">
+<a-entity id="mytarget"  mindar-image-target="targetIndex: 0">
 			
 <a-video
     material="src: #movie_thumbnail"
