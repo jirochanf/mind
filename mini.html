@@ -8,18 +8,11 @@
 
 <!--  プロファイル　　スクリプト　　-->
     <script>
-      const showInfo = () => {
-        let y = 0;
-        const profileButton = document.querySelector("#profile-button");
-		  
-        profileButton.setAttribute("visible", true);
-     }
-
+ 
         //ポートフォリオ表示部　     
         const showPortfolio = (done) => {
         const portfolio = document.querySelector("#panel");
         const PreviewButton = document.querySelector("#preview-button");
-		const btn01 = document.getElementById("my_btn01");
 	
         let y = 0;
         let currentItem = 0;
@@ -50,7 +43,6 @@
             console.log("target found");
  //           showAvatar(() => {
                 showPortfolio(() => {
-                    showInfo();
                 });
   		  });
           this.el.addEventListener('targetLost', event => {
