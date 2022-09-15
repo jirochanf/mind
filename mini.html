@@ -6,29 +6,60 @@
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image-aframe.prod.js"></script>
 
-	  <script>
-	const movie = document.querySelector("#movie");
-  	init: function movie() {
-  //    		var v = document.querySelector(#movie");
-    		this.el.addEventListener("mouseup", function (event) {
-    		//クリック時の処理
-                 movie.play();
-        	    		});
-		}
-		});
+<!--  プロファイル　　スクリプト　　-->
+    <script>
+      const showInfo = () => {
+        let y = 0;
+        const profileButton = document.querySelector("#profile-button");
 		  
-     AFRAME.registerComponent('mytarget', {
+        profileButton.setAttribute("visible", true);
+     }
+
+        //ポートフォリオ表示部　     
+        const showPortfolio = (done) => {
+        const portfolio = document.querySelector("#panel");
+        const PreviewButton = document.querySelector("#preview-button");
+		const btn01 = document.getElementById("my_btn01");
+	
+        let y = 0;
+        let currentItem = 0;
+
+        portfolio.setAttribute("visible", true);
+
+            PreviewButton.addEventListener('click', () => {
+              PreviewButton.setAttribute("visible", false);
+              const testVideo = document.createElement( "video" );
+              const canplayWebm = testVideo.canPlayType( 'video/webm; codecs="vp8, vorbis"' );
+              if (canplayWebm == "") {
+                document.querySelector("#video-link").setAttribute("src", "#video-mp4");
+                document.querySelector("#video-mp4").play();
+              } else {
+                document.querySelector("#video-link").setAttribute("src", "#video-webm");
+                document.querySelector("#video-webm").play();
+              }
+            });
+	
+          }
+          portfolio.setAttribute("position", "0 " + 0 + " -0.01");
+        }, 10);
+      }
+  
+      //  Aframeでターゲット0を摘出 
+      AFRAME.registerComponent('mytarget', {
         init: function () {
           this.el.addEventListener('targetFound', event => {
             console.log("target found");
-                    movie();
-          });
+ //           showAvatar(() => {
+                showPortfolio(() => {
+                    showInfo();
+                });
+  		  });
           this.el.addEventListener('targetLost', event => {
             console.log("target found");
           });
+          //this.el.emit('targetFound');
         }
-      });		  
-		  
+      });
 </script>
 	  
 	</head>
@@ -38,7 +69,7 @@
     
 		<a-assets>
 		
-<img id="movie_thumbnail" src="./assets/preview.png" crossorigin="anonymous">
+<img id="preview" src="./assets/preview.png" crossorigin="anonymous">
 <video id="movie" muted webkit-playsinline playsinline preload loop="true" src="./assets/video2.mp4"></video>
 
 		</a-assets>
@@ -47,14 +78,15 @@
 
 <!--ターゲット確認後-->      
 <a-entity id="mytarget"  mytarget mindar-image-target="targetIndex: 0">
-			
-<a-video
-	src="#movie"
-    material="src: #movie_thumbnail"
-    width="1"
-    height="0.6"
-    click-play
-></a-video>			
+
+<a-entity id="panel-item0">
+
+<a-video id="video-link" webkit-playsinline playsinline width="1" height="0.552" position="0 0 0"></a-video>
+<a-image id="preview-button" class="clickable" src="#preview" alpha-test="0.5" position="0 0 0" height="0.552" width="1">
+              </a-image>
+
+	
+	</a-entity>
 			
 		</a-entity>
     </a-scene>
