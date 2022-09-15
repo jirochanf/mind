@@ -7,7 +7,6 @@
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image-aframe.prod.js"></script>
 <script>
 AFRAME.registerComponent('movie', {
-	const movie = document.querySelector("#movie");
   init: function () {
     const el = this.el
 
@@ -37,16 +36,13 @@ AFRAME.registerComponent('movie', {
     })
   }
 })	  
-</script>
-	 
-<script>
-	      AFRAME.registerComponent('mytarget', {
+AFRAME.registerComponent('mytarget', {
         init: function () {
           this.el.addEventListener('targetFound', event => {
             console.log("target found");
                      movie();
           this.el.addEventListener('targetLost', event => {
-            console.log("target found");
+            console.log("target lost");
           });
           //this.el.emit('targetFound');
         }
