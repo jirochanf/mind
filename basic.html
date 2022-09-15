@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-<!--  最新版を2ターゲットに  target0をtarget1にコピーしたものの動かない  -->
+<!--  最新版を2ターゲットに  target0をtarget1にコピーしたものの動かない 不要なものを削除 -->
 	<head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -39,34 +39,7 @@
           namecard.setAttribute("visible", true);
         }, 10);
 
-/*
-let currentTab = '';
-        webButton.addEventListener('click', function (evt) {
-          text.setAttribute("value", "https://softmind.tech");
-          currentTab = 'web';
-        });
-        emailButton.addEventListener('click', function (evt) {
-          text.setAttribute("value", "hello@softmind.tech");
-          currentTab = 'email';
-        });
-        profileButton.addEventListener('click', function (evt) {
-          text.setAttribute("value", "AR, VR solutions and consultation");
-          currentTab = 'profile';
-        });
-        locationButton.addEventListener('click', function (evt) {
-          console.log("loc");
-          text.setAttribute("value", "Vancouver, Canada | Hong Kong");
-          currentTab = 'location';
-        });
-
-        text.addEventListener('click', function (evt) {
-          if (currentTab === 'web') {
-            window.location.href="https://softmind.tech";
-          }
-        });
-*/
-      }
-
+     }
 
         //ポートフォリオ表示部　     
         const showPortfolio = (done) => {
@@ -113,7 +86,6 @@ let currentTab = '';
                 document.querySelector("#paintandquest-video-webm").play();
               }
             });
-
 	
             setTimeout(() => {
               done();
@@ -122,21 +94,7 @@ let currentTab = '';
           portfolio.setAttribute("position", "0 " + 0 + " -0.01");
         }, 10);
       }
-
-/*3Dモデル  表示部
-      const showAvatar = (onDone) => {
-        const avatar = document.querySelector("#avatar");
-        let z = -0.3;
-        const id = setInterval(() => {
-          z += 0.008;
-          if (z >= 0.3) {
-            clearInterval(id);
-            onDone();
-          }
-          avatar.setAttribute("position", "0 1.25 " + z);
-        }, 10);
-      }
- */  
+  
       //  Aframeでターゲット0を摘出 
       AFRAME.registerComponent('mytarget', {
         init: function () {
@@ -150,111 +108,6 @@ let currentTab = '';
                   }, 600);
                 });
               }, 600);
- //           });
-		  });
-          this.el.addEventListener('targetLost', event => {
-            console.log("target found");
-          });
-          //this.el.emit('targetFound');
-        }
-      });
-</script>
-
-<script>
-	      const showInfo2 = () => {
-        let y = 0;
-        const profileButton2 = document.querySelector("#profile-button");
-        const webButton2 = document.querySelector("#web-button");
-        const emailButton2 = document.querySelector("#email-button");
-        const locationButton2 = document.querySelector("#location-button");
-        const text2 = document.querySelector("#text");
-		const namecard2 = document.querySelector("#namecard");
-
-		  
-        profileButton2.setAttribute("visible", true);
-        setTimeout2(() => {
-          webButton2.setAttribute("visible", true);
-        }, 10);
-        setTimeout2(() => {
-          emailButton2.setAttribute("visible", true);
-        }, 10);
-        setTimeout2(() => {
-          locationButton2.setAttribute("visible", true);
-        }, 10);
-		setTimeout2(() => {
-          namecard2.setAttribute("visible", true);
-        }, 10);
-		  }
-
-        //ポートフォリオ表示部　     
-        const showPortfolio2 = (done) => {
-        const portfolio2 = document.querySelector("#portfolio-panel2");
-        const portfolioLeftButton2 = document.querySelector("#portfolio-left-button2");
-        const portfolioRightButton2 = document.querySelector("#portfolio-right-button2");
-        const paintandquestPreviewButton2 = document.querySelector("#paintandquest-preview-button2");
-		const btn02 = document.getElementById("my_btn02");
-	
-        let y = 0;
-        let currentItem = 0;
-
-        portfolio2.setAttribute("visible", true);
-
-        const showPortfolioItem2 = (item) => {
-          for (let i = 0; i <= 2; i++) {
-            document.querySelector("#portfolio2-item" + i).setAttribute("visible", i === item);
-          }
-        }
-        const id = setInterval(() => {
-          y += 0.008;
-          if (y >= 0.6) {
-            clearInterval(id);
-            portfolioLeftButton2.setAttribute("visible", true);
-            portfolioRightButton2.setAttribute("visible", true);
-            portfolioLeftButton2.addEventListener('click', () => {
-              currentItem = (currentItem + 1) % 3;
-              showPortfolioItem2(currentItem);
-            });
-            portfolioRightButton2.addEventListener('click', () => {
-              currentItem = (currentItem - 1 + 3) % 3;
-              showPortfolioItem2(currentItem);
-            });
-
-            paintandquestPreviewButton2.addEventListener('click', () => {
-              paintandquestPreviewButton2.setAttribute("visible", false);
-              const testVideo = document.createElement( "video" );
-              const canplayWebm = testVideo.canPlayType( 'video/webm; codecs="vp8, vorbis"' );
-              if (canplayWebm == "") {
-                document.querySelector("#paintandquest-video-link2").setAttribute("src", "#paintandquest-video2-mp4");
-                document.querySelector("#paintandquest-video2-mp4").play();
-              } else {
-                document.querySelector("#paintandquest-video-link2").setAttribute("src", "#paintandquest-video2-webm");
-                document.querySelector("#paintandquest-video2-webm").play();
-              }
-            });
-
-	
-            setTimeout2(() => {
-              done();
-            }, 500);
-          }
-          portfolio2.setAttribute("position", "0 " + 0 + " -0.01");
-        }, 10);
-		}
-		
-			
-     //  Aframeでターゲット1を摘出 
-      AFRAME.registerComponent('mytarget1', {
-        init: function () {
-          this.el.addEventListener('targetFound', event => {
-            console.log("target1 mituketa");
- //           showAvatar(() => {
-             setTimeout2(() => {
-                showPortfolio2(() => {
-                 setTimeout2(() => {
-                    showInfo2();
-                 }, 300);
-                });
-              }, 300);
  //           });
 		  });
           this.el.addEventListener('targetLost', event => {
@@ -377,20 +230,7 @@ let currentTab = '';
 
 <!--targer1用-->
          <img id="card2" src="./assets/meishi2.jpg" />
-          <img id="icon-web2" src="./assets/web.png" />
-          <img id="icon-location2" src="./assets/youtube.png" />
-          <img id="icon-profile2" src="./assets/kao2.png" />
-          <img id="icon-phone2" src="./assets/phone.png" />
-          <img id="icon-email2" src="./assets/email.png" />
-          <img id="icon-play2" src="./assets/play.png" />
-          <img id="icon-left2" src="./assets/left.png" />
-          <img id="icon-right2" src="./assets/right.png" />
-          <img id="paintandquest-preview2" src="./assets/preview2.png" />
-          <video id="paintandquest-video2-mp4" autoplay="false" loop="true" src="./assets/video2.mp4"></video>
-          <video id="paintandquest-video2-webm" autoplay="false" loop="true" src="./assets/paintandquest.webm"></video>
 		<video id="video02" muted webkit-playsinline playsinline loop="true" src="./assets/video2.mp4"></video>
- 		  <img id="coffeemachine-preview2" src="./assets/alubum1.jpeg" />
-          <img id="peak-preview2" src="./assets/alubum2.jpeg" />
 		  
 <!--3Dmodel-->
           
@@ -455,61 +295,13 @@ let currentTab = '';
 
  <a-gltf-model  id="3dmodel" src="./3dmodel/trail.gltf"  position="-0.3 0.8 0" rotation="30 -30 0" scale="0.03 0.03 0.03"></a-gltf-model>			
 
-		  <!--
-<model-viewer preload poster="assets/asset.jpeg" src="./3dmodel/trail.gltf" ios-src="./3dmodel/trail.usdz" 
-		      auto-rotate camera-controls ar alt="3dmodel"></model-viewer>	
-
-<a-text id="text" class="clickable" value="" color="black" align="center" width="2" position="0 -1 0" geometry="primitive:plane; height: 0.1; width: 2;" material="opacity: 0.5"></a-text>
--->
 		  </a-entity>
 
 	  
 <!-- target1 を確認後-->	  
 <a-entity id="mytarget1" mytarget1 mindar-image-target="targetIndex: 1">
-	
-	
-	           <a-entity visible="false" id="portfolio-panel2" position="0 0 -0.01">
  
-  <!--  ポートフォリオ表示部　  -->
-            <a-entity id="portfolio2-item0">
-              <a-video id="paintandquest-video-link2" webkit-playsinline playsinline width="1" height="0.552" position="0 0 0"></a-video>
-              <a-image id="paintandquest-preview-button2" class="clickable" src="#paintandquest-preview2" alpha-test="0.5" position="0 0 0" height="0.552" width="1">
-              </a-image>
-            </a-entity>
-            <a-entity id="portfolio2-item1" visible="false">
-              <a-image class="clickable" src="#coffeemachine-preview2" alpha-test="0.5" position="0 0 0" height="0.552" width="1">
-              </a-image>
-            </a-entity>
-            <a-entity id="portfolio2-item2" visible="false">
-              <a-image class="clickable" src="#peak-preview2" alpha-test="0.5" position="0 0 0" height="0.552" width="1">
-              </a-image>
-            </a-entity>
-
-            <a-image visible="false" id="portfolio-left-button2" class="clickable" src="#icon-left2" position="-0.7 0 0" height="0.15" width="0.15"></a-image>
-            <a-image visible="false" id="portfolio-right-button2" class="clickable" src="#icon-right2" position="0.7 0 0" height="0.15" width="0.15"></a-image>
-          </a-entity>
-			
-          <a-image visible="false" id="profile-button2" class="clickable" src="#icon-profile2" position="-0.42 -0.5 0" height="0.15" width="0.15"
-            animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
-          ></a-image>
-
-          <a-image visible="false" id="web-button2" class="clickable" src="#icon-web2" alpha-test="0.5" position="-0.14 -0.5 0" height="0.15" width="0.15"
-            animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
-				   link="href: https://netken.info/; title: My Home Page;"
-          ></a-image>
-
-          <a-image visible="false" id="email-button2" class="clickable" src="#icon-email2"  position="0.14 -0.5 0" height="0.15" width="0.15"
-            animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
-				   link="href: mailto:fujiwara@yomde.net;"
-          ></a-image>
-
-          <a-image visible="false" id="location-button2" class="clickable" src="#icon-location2" position="0.42 -0.5 0" height="0.15" width="0.15"
-            animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
-				   link="href: https://www.youtube.com/channel/UC262c4cdRkfrllw37mpUKOA/videos; title: Senior Travel;"
-          ></a-image>
-
 <a-image visible="false"  id="namecard2" class="clickable" src="./assets/meishi2.jpg" position="0.4 0.65 0" height="0.5" width="0.35"></a-image>	
-
 	
 <a-gltf-model rotation="0 0 0 " position="-0.3 0.5 0" scale="0.05 0.05 0.05" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/raccoon/scene.gltf" animation-mixer></a-gltf-model>
   
