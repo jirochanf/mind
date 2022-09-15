@@ -9,7 +9,15 @@
 	<link rel="stylesheet" href="./assets/webar.css">	  
 	</head>
 
-	<body>
+<body>	
+<div class="example-container">
+   <div id="example-scanning-overlay" class="hidden">
+	<div class="inner">
+	   <img src="./assets/overlay.jpg"/>  <!-- オーバーレイ画像定義 -->
+	<div class="scanline"></div>
+	 </div>
+</div>
+			
  <a-scene mindar-image="imageTargetSrc: ./assets/targets2.mind; showStats: false; uiScanning: #example-scanning-overlay;" embedded color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
  
 	  <a-assets>
@@ -103,5 +111,6 @@
   
 </a-entity>
 		</a-scene>
-  </body>
+</div>	
+</body>
 </html>
