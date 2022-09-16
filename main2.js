@@ -38,7 +38,7 @@
           document.querySelector("#panel2-item" + i).setAttribute("visible", i === item);
         }
       }
-      const id = setInterval(() => {
+      const id = setInterval2(() => {
         y += 0.008;
         if (y >= 0.6) {
           clearInterval(id);
