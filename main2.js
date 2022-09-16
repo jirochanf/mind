@@ -41,7 +41,7 @@
       const id = setInterval2(() => {
         y += 0.008;
         if (y >= 0.6) {
-          clearInterval(id);
+          clearInterval2(id);
           LeftButton2.setAttribute("visible", true);
           RightButton2.setAttribute("visible", true);
           LeftButton2.addEventListener('click', () => {
@@ -68,7 +68,7 @@
 
           setTimeout2(() => {
             done();
-          }, 500);
+          }, 50);
         }
         portfolio2.setAttribute("position", "0 " + 0 + " -0.01");
       }, 10);
