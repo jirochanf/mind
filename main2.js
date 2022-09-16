@@ -50,7 +50,7 @@
           });
           RightButton2.addEventListener('click', () => {
             currentItem = (currentItem - 1 + 3) % 3;
-            showPortfolioItem(currentItem);
+            showPortfolioItem2(currentItem);
           });
 
           PreviewButton2.addEventListener('click', () => {
