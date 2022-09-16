@@ -80,13 +80,13 @@ AFRAME.registerComponent('mytarget1', {
         this.el.addEventListener('targetFound', event => {
           console.log("target found");
 //           showAvatar(() => {
-            setTimeout2(() => {
+//            setTimeout2(() => {
               showPortfolio2(() => {
-                setTimeout2(() => {
+//                setTimeout2(() => {
                   showInfo2();
-                }, 600);
+//                }, 600);
               });
-            }, 600);
+//            }, 600);
 //           });
         });
         this.el.addEventListener('targetLost', event => {
