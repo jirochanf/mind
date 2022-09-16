@@ -90,7 +90,7 @@ AFRAME.registerComponent('mytarget1', {
 //           });
         });
         this.el.addEventListener('targetLost', event => {
-          console.log("target found");
+          console.log("target lost");
         });
         //this.el.emit('targetFound');
       }
