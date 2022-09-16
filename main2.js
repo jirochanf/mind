@@ -7,16 +7,16 @@
       const namecard2 = document.querySelector("#namecard2");
 
       profileButton2.setAttribute("visible", true);
-      setTimeout2(() => {
+      setTimeout(() => {
         webButton2.setAttribute("visible", true);
       }, 10);
-      setTimeout2(() => {
+      setTimeout(() => {
         emailButton2.setAttribute("visible", true);
       }, 10);
-      setTimeout2(() => {
+      setTimeout(() => {
         locationButton2.setAttribute("visible", true);
       }, 10);
-      setTimeout2(() => {
+      setTimeout(() => {
         namecard2.setAttribute("visible", true);
       }, 10);
 
@@ -38,10 +38,10 @@
           document.querySelector("#panel2-item" + i).setAttribute("visible", i === item);
         }
       }
-      const id = setInterval2(() => {
+      const id = setInterval(() => {
         y += 0.008;
         if (y >= 0.6) {
-          clearInterval2(id);
+          clearInterval(id);
           LeftButton2.setAttribute("visible", true);
           RightButton2.setAttribute("visible", true);
           LeftButton2.addEventListener('click', () => {
@@ -66,7 +66,7 @@
             }
           });
 
-          setTimeout2(() => {
+          setTimeout(() => {
             done();
           }, 50);
         }
