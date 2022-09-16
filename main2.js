@@ -58,11 +58,11 @@
             const testVideo = document.createElement( "video" );
             const canplayWebm = testVideo.canPlayType( 'video/webm; codecs="vp8, vorbis"' );
             if (canplayWebm == "") {
-              document.querySelector("#video-link2").setAttribute("src", "#video-mp42");
-              document.querySelector("#video-mp42").play();
+              document.querySelector("#video-link2").setAttribute("src", "#video2-mp4");
+              document.querySelector("#video2-mp4").play();
             } else {
-              document.querySelector("#video-link2").setAttribute("src", "#video-webm");
-              document.querySelector("#video-webm").play();
+              document.querySelector("#video-link2").setAttribute("src", "#video2-webm");
+              document.querySelector("#video2-webm").play();
             }
           });
 
