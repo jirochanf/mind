@@ -37,7 +37,8 @@
   <img id="preview2" src="./assets/alubum1.jpeg" />
   <img id="preview3" src="./assets/alubum2.jpeg" />
 <!--target1 assets-->
-  <img id="card2" src="./assets/meishi2.jpg" />		  
+  <img id="card2" src="./assets/meishi2.jpg" />
+	
   <img id="icon-web2" src="./assets/web.png" />
   <img id="icon-location2" src="./assets/youtube.png" />
   <img id="icon-profile2" src="./assets/kao2.png" />
@@ -46,7 +47,8 @@
   <img id="icon-play2" src="./assets/play.png" />
   <img id="icon-left2" src="./assets/left.png" />
   <img id="icon-right2" src="./assets/right.png" />
-  <img id="preview2_1" src="./assets/preview.png" />
+	
+  <img id="preview2_1" src="./assets/preview2.png" />
   <video id="video-mp42" autoplay="false" loop="true" src="./assets/video2.mp4"></video>
 	<img id="preview2_2" src="./assets/alubum1.jpeg" />
   <img id="preview2_3" src="./assets/alubum2.jpeg" />
@@ -77,25 +79,25 @@
           </a-image>
         </a-entity>
 <!--  ボタン　  -->	
-        <a-image visible="false" id="left-button" class="clickable" src="#icon-left2" position="-0.7 0 0" height="0.15" width="0.15"></a-image>
-        <a-image visible="false" id="right-button" class="clickable" src="#icon-right2" position="0.7 0 0" height="0.15" width="0.15"></a-image>
+        <a-image visible="false" id="left-button" class="clickable" src="#icon-left" position="-0.7 0 0" height="0.15" width="0.15"></a-image>
+        <a-image visible="false" id="right-button" class="clickable" src="#icon-right" position="0.7 0 0" height="0.15" width="0.15"></a-image>
 </a-entity>
-      <a-image visible="false" id="profile-button" class="clickable" src="#icon-profile2" position="-0.42 -0.5 0" height="0.15" width="0.15"
+      <a-image visible="false" id="profile-button" class="clickable" src="#icon-profile" position="-0.42 -0.5 0" height="0.15" width="0.15"
         animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
       ></a-image>
-      <a-image visible="false" id="web-button" class="clickable" src="#icon-web2" alpha-test="0.5" position="-0.14 -0.5 0" height="0.15" width="0.15"
+      <a-image visible="false" id="web-button" class="clickable" src="#icon-web" alpha-test="0.5" position="-0.14 -0.5 0" height="0.15" width="0.15"
         animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
                link="href: https://netken.info/; title: My Home Page;"
       ></a-image>
-      <a-image visible="false" id="email-button" class="clickable" src="#icon-email2"  position="0.14 -0.5 0" height="0.15" width="0.15"
+      <a-image visible="false" id="email-button" class="clickable" src="#icon-email"  position="0.14 -0.5 0" height="0.15" width="0.15"
         animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
                link="href: mailto:fujiwara@yomde.net;"
       ></a-image>
-      <a-image visible="false" id="location-button" class="clickable" src="#icon-location2" position="0.42 -0.5 0" height="0.15" width="0.15"
+      <a-image visible="false" id="location-button" class="clickable" src="#icon-location" position="0.42 -0.5 0" height="0.15" width="0.15"
         animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
                link="href: https://www.youtube.com/channel/UC262c4cdRkfrllw37mpUKOA/videos; title: Senior Travel;"
       ></a-image>
-<a-image visible="false"  id="namecard" class="clickable" src="./assets/meishi2.jpg" position="0.4 0.65 0" height="0.5" width="0.35"></a-image>	
+<a-image visible="false"  id="namecard" class="clickable" src="./assets/meishi.png" position="0.4 0.65 0" height="0.5" width="0.35"></a-image>	
 
   <a-image  src="./assets/title.png" position="-0.25 0.5 0" height="0.9" width="0.9"></a-image>
 <a-gltf-model  id="3dmodel" src="./3dmodel/trail.gltf"  position="-0.3 0.8 0" rotation="30 -30 0" scale="0.03 0.03 0.03"></a-gltf-model>			
@@ -141,9 +143,9 @@
         animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
                link="href: https://www.youtube.com/channel/UC262c4cdRkfrllw37mpUKOA/videos; title: Senior Travel;"
       ></a-image>
-	<a-image visible="false"  id="namecard2" class="clickable" src="./assets/meishi2.jpg" position="0.4 0.65 0" height="0.5" width="0.35"></a-image>	
-
-	<a-gltf-model  id="3dmodel2" src="#avatarModel"  position="-0.3 0.8 0" rotation="30 -30 0" scale="0.03 0.03 0.03"></a-gltf-model>			
+	<a-image visible="false"  id="namecard2" class="clickable" src="./assets/meishi2.jpg" position="0.4 0.65 0" height="0.5" width="0.35"></a-image>
+	
+<a-gltf-model rotation="0 0 0 " position="-0.3 0.5 0" scale="0.05 0.05 0.05" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/raccoon/scene.gltf" animation-mixer></a-gltf-model>	
 
       </a-entity>
     </a-scene>
