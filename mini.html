@@ -5,8 +5,7 @@
 <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image.prod.js"></script>
 <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image-aframe.prod.js"></script>
-<script src="main.js"></script>
-<script src="main2.js"></script>
+<script src="mini.js"></script>
 <link rel="stylesheet" href="./assets/webar.css">	  
 </head>
 
@@ -23,40 +22,20 @@
 
 <a-assets>
   <img id="card" src="./assets/meishi.png" />
-  <img id="icon-web" src="./assets/web.png" />
-  <img id="icon-location" src="./assets/youtube.png" />
-  <img id="icon-profile" src="./assets/kao2.png" />
-  <img id="icon-phone" src="./assets/phone.png" />
-  <img id="icon-email" src="./assets/email.png" />
-  <img id="icon-play" src="./assets/play.png" />
-  <img id="icon-left" src="./assets/left.png" />
-  <img id="icon-right" src="./assets/right.png" />
   <img id="preview" src="./assets/preview.png" />
   <video id="video-mp4" autoplay="false" loop="false" src="./assets/video3.mp4"></video>
   <video id="video-webm" autoplay="false" loop="false" src="./assets/paintandquest.webm"></video>
-  <img id="preview2" src="./assets/alubum1.jpeg" />
-  <img id="preview3" src="./assets/alubum2.jpeg" />
 <!--target1 assets-->
   <img id="card2" src="./assets/meishi2.jpg" />
-	
-  <img id="icon-web2" src="./assets/web.png" />
-  <img id="icon-location2" src="./assets/youtube.png" />
-  <img id="icon-profile2" src="./assets/kao2.png" />
-  <img id="icon-phone2" src="./assets/phone.png" />
-  <img id="icon-email2" src="./assets/email.png" />
-  <img id="icon-play2" src="./assets/play.png" />
-  <img id="icon-left2" src="./assets/left.png" />
-  <img id="icon-right2" src="./assets/right.png" />
-	
   <img id="preview2_1" src="./assets/preview2.png" />
   <video id="video2-mp4" autoplay="false" loop="false" src="./assets/video2.mp4"></video>
-	<video id="video2-webm" autoplay="false" loop="false" src="./assets/paintandquest.webm"></video>
+<video id="video2-webm" autoplay="false" loop="false" src="./assets/paintandquest.webm"></video>
 	<img id="preview2_2" src="./assets/alubum21.jpg" />
-  <img id="preview2_3" src="./assets/alubum22.jpg" />
 
 <!--3Dmodel-->
       <a-asset-item id="avatarModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/examples/image-tracking/assets/card-example/softmind/scene.gltf"></a-asset-item>
       </a-assets>
+	
 	  <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: 10000; objects: .clickable">
       </a-camera>
 
@@ -70,37 +49,6 @@
           <a-image id="preview-button" class="clickable" src="#preview" alpha-test="0.5" position="0 0 0" height="0.552" width="1">
           </a-image>
         </a-entity>
-<!--  スライド　  -->
-	<a-entity id="panel-item1" visible="false">
-          <a-image class="clickable" src="#preview2" alpha-test="0.5" position="0 0 0" height="0.552" width="1">
-          </a-image>
-        </a-entity>
-        <a-entity id="panel-item2" visible="false">
-          <a-image class="clickable" src="#preview3" alpha-test="0.5" position="0 0 0" height="0.552" width="1">
-          </a-image>
-        </a-entity>
-<!--  ボタン　  -->	
-        <a-image visible="false" id="left-button" class="clickable" src="#icon-left" position="-0.7 0 0" height="0.15" width="0.15"></a-image>
-        <a-image visible="false" id="right-button" class="clickable" src="#icon-right" position="0.7 0 0" height="0.15" width="0.15"></a-image>
-</a-entity>
-      <a-image visible="false" id="profile-button" class="clickable" src="#icon-profile" position="-0.42 -0.5 0" height="0.15" width="0.15"
-        animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
-      ></a-image>
-      <a-image visible="false" id="web-button" class="clickable" src="#icon-web" alpha-test="0.5" position="-0.14 -0.5 0" height="0.15" width="0.15"
-        animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
-               link="href: https://netken.info/; title: My Home Page;"
-      ></a-image>
-      <a-image visible="false" id="email-button" class="clickable" src="#icon-email"  position="0.14 -0.5 0" height="0.15" width="0.15"
-        animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
-               link="href: mailto:fujiwara@yomde.net;"
-      ></a-image>
-      <a-image visible="false" id="location-button" class="clickable" src="#icon-location" position="0.42 -0.5 0" height="0.15" width="0.15"
-        animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
-               link="href: https://www.youtube.com/channel/UC262c4cdRkfrllw37mpUKOA/videos; title: Senior Travel;"
-      ></a-image>
-<a-image visible="false"  id="namecard" class="clickable" src="./assets/meishi.png" position="0.4 0.65 0" height="0.5" width="0.35"></a-image>	
-
-  <a-image  src="./assets/title.png" position="-0.25 0.5 0" height="0.9" width="0.9"></a-image>
 <a-gltf-model  id="3dmodel" src="./3dmodel/trail.gltf"  position="-0.3 0.8 0" rotation="30 -30 0" scale="0.03 0.03 0.03"></a-gltf-model>			
 
 </a-entity>
@@ -108,46 +56,9 @@
 <!-- target1 を確認後-->	  
 <a-entity id="mytarget1" mytarget1 mindar-image-target="targetIndex: 1">
 
-<a-entity visible="false" id="panel2" position="0 0 -0.01">
 
 <!--  ポートフォリオ表示部　　動画  -->
-        <a-entity id="panel2-item0">
-          <a-video id="video-link2" webkit-playsinline playsinline width="1" height="0.552" position="0 0 0"></a-video>
-          <a-image id="preview-button2" class="clickable" src="#preview2_1" alpha-test="0.5" position="0 0 0" height="0.552" width="1">
-          </a-image>
-        </a-entity>
-<!--  スライド　  -->	
-        <a-entity id="panel2-item1" visible="false">
-          <a-image class="clickable" src="#preview2_2" alpha-test="0.5" position="0 0 0" height="0.552" width="1">
-          </a-image>
-        </a-entity>
-        <a-entity id="panel2-item2" visible="false">
-          <a-image class="clickable" src="#preview2_3" alpha-test="0.5" position="0 0 0" height="0.552" width="1">
-          </a-image>
-        </a-entity>
-<!--  ボタン　  -->
-        <a-image visible="false" id="left-button2" class="clickable" src="#icon-left" position="-0.7 0 0" height="0.15" width="0.15"></a-image>
-        <a-image visible="false" id="right-button2" class="clickable" src="#icon-right" position="0.7 0 0" height="0.15" width="0.15"></a-image>
-</a-entity>
-		
-      <a-image visible="false" id="profile-button2" class="clickable" src="#icon-profile" position="-0.42 -0.5 0" height="0.15" width="0.15"
-        animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
-      ></a-image>
-      <a-image visible="false" id="web-button2" class="clickable" src="#icon-web" alpha-test="0.5" position="-0.14 -0.5 0" height="0.15" width="0.15"
-        animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
-               link="href: https://netken.info/; title: My Home Page;"
-      ></a-image>
-      <a-image visible="false" id="email-button2" class="clickable" src="#icon-email"  position="0.14 -0.5 0" height="0.15" width="0.15"
-        animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
-               link="href: mailto:fujiwara@yomde.net;"
-      ></a-image>
-      <a-image visible="false" id="location-button2" class="clickable" src="#icon-location" position="0.42 -0.5 0" height="0.15" width="0.15"
-        animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
-               link="href: https://www.youtube.com/channel/UC262c4cdRkfrllw37mpUKOA/videos; title: Senior Travel;"
-      ></a-image> 	
-	<a-image visible="false"  id="namecard2" class="clickable" src="./assets/meishi2.jpg" position="0.4 0.65 0" height="0.4" width="0.65"></a-image>
-	
-<a-gltf-model rotation="0 0 0 " position="-0.3 0.5 0" scale="0.05 0.05 0.05" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/raccoon/scene.gltf" animation-mixer></a-gltf-model>	
+ <a-gltf-model rotation="0 0 0 " position="-0.3 0.5 0" scale="0.05 0.05 0.05" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/raccoon/scene.gltf" animation-mixer></a-gltf-model>	
 
       </a-entity>
     </a-scene>
