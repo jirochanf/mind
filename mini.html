@@ -21,47 +21,48 @@
 <a-scene mindar-image="imageTargetSrc: ./assets/targets2.mind; showStats: false; uiScanning: #example-scanning-overlay;" embedded color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
 
 <a-assets>
-  <img id="card" src="./assets/meishi.png" />
-  <img id="preview" src="./assets/preview.png" />
-  <video id="video-mp4" autoplay="false" loop="false" src="./assets/video3.mp4"></video>
-  <video id="video-webm" autoplay="false" loop="false" src="./assets/paintandquest.webm"></video>
+<img id="card" src="./assets/meishi.png" />
+<img id="preview" src="./assets/preview.png" />
+<video id="video-mp4" autoplay="false" loop="false" src="./assets/video3.mp4"></video>
+<video id="video-webm" autoplay="false" loop="false" src="./assets/paintandquest.webm"></video>
 <!--target1 assets-->
-  <img id="card2" src="./assets/meishi2.jpg" />
-  <img id="preview2_1" src="./assets/preview2.png" />
-  <video id="video2-mp4" autoplay="false" loop="false" src="./assets/video2.mp4"></video>
+<img id="card2" src="./assets/meishi2.jpg" />
+<img id="preview2_1" src="./assets/preview2.png" />
+<video id="video2-mp4" autoplay="false" loop="false" src="./assets/video2.mp4"></video>
 <video id="video2-webm" autoplay="false" loop="false" src="./assets/paintandquest.webm"></video>
-	<img id="preview2_2" src="./assets/alubum21.jpg" />
+<img id="preview2_2" src="./assets/alubum21.jpg" />
 
 <!--3Dmodel-->
-      <a-asset-item id="avatarModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/examples/image-tracking/assets/card-example/softmind/scene.gltf"></a-asset-item>
-      </a-assets>
-	
-	  <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: 10000; objects: .clickable">
-      </a-camera>
+    <a-asset-item id="avatarModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/examples/image-tracking/assets/card-example/softmind/scene.gltf"></a-asset-item>
+    </a-assets>
+
+<a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: 10000; objects: .clickable">
+</a-camera>
 
 <!-- target0 確認後-->
 <a-entity id="mytarget" mytarget mindar-image-target="targetIndex: 0">
 <a-entity visible="false" id="panel" position="0 0 -0.01">
 
 <!--  ポートフォリオ表示部　動画  -->
-        <a-entity id="panel-item0">
-          <a-video id="video-link" webkit-playsinline playsinline width="1" height="0.552" position="0 0 0"></a-video>
-          <a-image id="preview-button" class="clickable" src="#preview" alpha-test="0.5" position="0 0 0" height="0.552" width="1">
-          </a-image>
-        </a-entity>
+      <a-entity id="panel-item0">
+        <a-video id="video-link" webkit-playsinline playsinline width="1" height="0.552" position="0 0 0"></a-video>
+        <a-image id="preview-button" class="clickable" src="#preview" alpha-test="0.5" position="0 0 0" height="0.552" width="1">
+        </a-image>
+      </a-entity>
 <a-gltf-model  id="3dmodel" src="./3dmodel/trail.gltf"  position="-0.3 0.8 0" rotation="30 -30 0" scale="0.03 0.03 0.03"></a-gltf-model>			
 
 </a-entity>
 
 <!-- target1 を確認後-->	  
-<a-entity id="mytarget1" mytarget1 mindar-image-target="targetIndex: 1">
+<a-entity id="mytarget1" mindar-image-target="targetIndex: 1">
 
 
 <!--  ポートフォリオ表示部　　動画  -->
- <a-gltf-model rotation="0 0 0 " position="-0.3 0.5 0" scale="0.05 0.05 0.05" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/raccoon/scene.gltf" animation-mixer></a-gltf-model>	
+<a-gltf-model rotation="0 0 0 " position="-0.3 0.5 0" scale="0.05 0.05 0.05" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/raccoon/scene.gltf" animation-mixer></a-gltf-model>	
 
-      </a-entity>
-    </a-scene>
+</a-entity>
+	
+</a-scene>
 </div>	
 </body>
 </html>
