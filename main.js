@@ -1,5 +1,5 @@
    const showInfo = () => {
-      let y = 0;
+//      let y = 0;
       const profileButton = document.querySelector("#profile-button");
       const webButton = document.querySelector("#web-button");
       const emailButton = document.querySelector("#email-button");
