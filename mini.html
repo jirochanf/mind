@@ -89,7 +89,10 @@ AFRAME.registerComponent('mytarget', {
 
 <!--3Dmodel-->
     <a-asset-item id="avatarModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/examples/image-tracking/assets/card-example/softmind/scene.gltf"></a-asset-item>
-    </a-assets>
+	<a-asset-item id="bearModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/bear/scene.gltf"></a-asset-item>
+	<a-asset-item id="raccoonModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/raccoon/scene.gltf"></a-asset-item>
+
+	</a-assets>
 
 <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: 10000; objects: .clickable">
 </a-camera>
@@ -111,15 +114,12 @@ AFRAME.registerComponent('mytarget', {
 <!-- target1 を確認後-->	  
 <a-entity id="mytarget1" mindar-image-target="targetIndex: 1">
 
-<!--  ポートフォリオ表示部　　動画  -->
-
-<a-image src="./assets/meishi2.jpg" position="0 0 0" height="0.65" width="1"></a-image>
-
-<a-gltf-model rotation="0 0 0 " position="-0.3 0.5 0" scale="0.05 0.05 0.05" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/raccoon/scene.gltf" animation-mixer></a-gltf-model>	
-
+	<a-image src="./assets/meishi2.jpg" position="0 0 0" height="0.65" width="1"></a-image>
+	<a-gltf-model rotation="0 0 0 " position="0 -0.25 0" scale="0.05 0.05 0.05" src="#bearModel" animation-mixer></a-gltf-model>
 </a-entity>
+
+</a-scene>	
 	
-</a-scene>
 </div>	
 </body>
 </html>
