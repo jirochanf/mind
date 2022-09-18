@@ -5,7 +5,62 @@
 <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image.prod.js"></script>
 <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image-aframe.prod.js"></script>
-<script src="mini.js"></script>
+<script
+      const showPortfolio = (done) => {
+      const portfolio = document.querySelector("#panel");
+      const PreviewButton = document.querySelector("#preview-button");
+      let y = 0;
+      let currentItem = 0;
+      portfolio.setAttribute("visible", true);
+      const showPortfolioItem = (item) => {
+        for (let i = 0; i <= 2; i++) {
+          document.querySelector("#panel-item" + i).setAttribute("visible", i === item);
+        }
+      }
+      const id = setInterval(() => {
+        y += 0.008;
+        if (y >= 0.6) {
+          clearInterval(id);
+          PreviewButton.addEventListener('click', () => {
+            PreviewButton.setAttribute("visible", false);
+            const testVideo = document.createElement( "video" );
+            const canplayWebm = testVideo.canPlayType( 'video/webm; codecs="vp8, vorbis"' );
+            if (canplayWebm == "") {
+              document.querySelector("#video-link").setAttribute("src", "#video-mp4");
+              document.querySelector("#video-mp4").play();
+            } else {
+              document.querySelector("#video-link").setAttribute("src", "#video-webm");
+              document.querySelector("#video-webm").play();
+            }
+          });
+          setTimeout(() => {
+            done();
+          }, 50);
+        }
+        portfolio.setAttribute("position", "0 " + 0 + " -0.01");
+      }, 10);
+    }
+    //  Aframeでターゲット0を摘出 
+AFRAME.registerComponent('mytarget', {
+      init: function () {
+        this.el.addEventListener('targetFound', event => {
+          console.log("target found");
+//           showAvatar(() => {
+            setTimeout(() => {
+              showPortfolio(() => {
+                setTimeout(() => {
+                }, 600);
+              });
+            }, 600);
+//           });
+        });
+        this.el.addEventListener('targetLost', event => {
+          console.log("target found");
+        });
+        //this.el.emit('targetFound');
+      }
+    });		
+</script>
 <link rel="stylesheet" href="./assets/webar.css">	  
 </head>
 
@@ -44,11 +99,11 @@
 <a-entity visible="false" id="panel" position="0 0 -0.01">
 
 <!--  ポートフォリオ表示部　動画  -->
-      <a-entity id="panel-item0">
-        <a-video id="video-link" webkit-playsinline playsinline width="1" height="0.552" position="0 0 0"></a-video>
-        <a-image id="preview-button" class="clickable" src="#preview" alpha-test="0.5" position="0 0 0" height="0.552" width="1">
-        </a-image>
-      </a-entity>
+  <a-entity id="panel-item0">
+    <a-video id="video-link" webkit-playsinline playsinline width="1" height="0.552" position="0 0 0"></a-video>
+    <a-image id="preview-button" class="clickable" src="#preview" alpha-test="0.5" position="0 0 0" height="0.552" width="1">
+    </a-image>
+  </a-entity>
 <a-gltf-model  id="3dmodel" src="./3dmodel/trail.gltf"  position="-0.2 0.8 0" rotation="30 -30 0" scale="0.03 0.03 0.03"></a-gltf-model>			
 
 </a-entity>
@@ -58,7 +113,7 @@
 
 <!--  ポートフォリオ表示部　　動画  -->
 
-<a-image visible="false"  id="namecard2" class="clickable" src="./assets/meishi2.jpg" position="0.4 0.65 0" height="0.4" width="0.65"></a-image>
+<a-image src="./assets/meishi2.jpg" position="0 0 0" height="0.65" width="1"></a-image>
 
 <a-gltf-model rotation="0 0 0 " position="-0.3 0.5 0" scale="0.05 0.05 0.05" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/raccoon/scene.gltf" animation-mixer></a-gltf-model>	
 
