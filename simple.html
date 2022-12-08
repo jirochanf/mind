@@ -1,42 +1,72 @@
+<!doctype html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image.prod.js"></script>
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image-aframe.prod.js"></script>
-  </head>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image.prod.js"></script>
+<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image-aframe.prod.js"></script>
+<script src="main.js"></script>
 
-  <body>
-    <a-scene mindar-image="imageTargetSrc: https://jirochanf.github.io/card/assets/targets3.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
-  <a-assets>
-  <img id="omote" src="https://jirochanf.github.io/card/assets/overlay.jpg" />
-	<img id="ura" src="https://jirochanf.github.io/card/assets/meishi2.jpg" />
+<link rel="stylesheet" href="https://jirochanf.github.io/card/assets/webar.css">	  
+</head>
+
+<body>	
+<div class="example-container">
+<div id="example-scanning-overlay" class="hidden">
+<div class="inner">
+<img src="https://jirochanf.github.io/card/assets/overlay_mind3.jpg"/>  <!-- オーバーレイ画像定義 -->
+<div class="scanline"></div>
+</div>
+</div>
+
+<a-scene mindar-image="imageTargetSrc: https://jirochanf.github.io/card//assets/targets3.mind; showStats: false; uiScanning: #example-scanning-overlay;" embedded color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+
+<a-assets>
+  <img id="card" src="https://jirochanf.github.io/card//assets/card31.png" />
+  <img id="web-button" src="https://jirochanf.github.io/card//assets/web.png" />
+  <img id="location-button" src="https://jirochanf.github.io/card/assets/youtube.png" />
+  <img id="profile-button" src="https://jirochanf.github.io/card/assets/kao2.png" />
+  <img id="phone-button" src="https://jirochanf.github.io/card/assets/phone.png" />
+  <img id="email-button" src="https://jirochanf.github.io/card/assets/email.png" />
+  <img id="play-button" src="https://jirochanf.github.io/card/assets/play.png" />
+  <img id="left-button" src="https://jirochanf.github.io/card/assets/left.png" />
+  <img id="right-button" src="https://jirochanf.github.io/card/assets/right.png" />
+  <img id="preview" src="https://jirochanf.github.io/card/assets/mind3_prev01.jpg" />
+  <video id="video-mp4" autoplay="false" loop="false" src="https://jirochanf.github.io/card/assets/video31.mp4"></video>
+  <video id="video-webm" autoplay="false" loop="false" src="https://jirochanf.github.io/card/assets/paintandquest.webm"></video>
+  <img id="namecard" src="https://jirochanf.github.io/card/assets/alubum_mind3_1.jpg" />
+  <img id="preview3" src="https://jirochanf.github.io/card/assets/alubum_mind3_2.jpg" />
+  <img id="ura" src="https://jirochanf.github.io/card/assets/ura_guide.png" />
+
+<!--3Dmodel-->
+<a-asset-item id="avatarModel" src="https://jirochanf.github.io/card/3dmodel/gopro10.gltf"></a-asset-item>
+<a-asset-item id="bearModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/bear/scene.gltf"></a-asset-item>
+<a-asset-item id="raccoonModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/raccoon/scene.gltf"></a-asset-item>
+   
+</a-assets>
 	
-	<a-asset-item id="bearModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/bear/scene.gltf"></a-asset-item>
-	<a-asset-item id="raccoonModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/raccoon/scene.gltf"></a-asset-item>
-  </a-assets>
+<a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: 10000; objects: .clickable">
+</a-camera>
 
-      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+<!-- target0 確認後-->
+<a-entity id="mytarget" mytarget mindar-image-target="targetIndex: 0">
+<a-entity visible="false" id="panel" position="0 0 -0.01">
 
-      <a-entity mindar-image-target="targetIndex: 0">
-<a-text value="Jiro" color="white" align="center" width="2" position="0 -0.4 0"></a-text>        
-<a-plane src="#omote" position="0 0 0" height="0.552" width="1" rotation="30 0 0">
-<a-animation
-　　attribute="position" direction="nomal" dur="10000" from="-1 -30 1" to="0 -1 -5"　　　repeat="indefinite"></a-animation>
-</a-plane>
+<!--  動画表示  -->
+<a-entity id="panel-item0">
+<a-video id="video-link" webkit-playsinline playsinline width="1" height="0.552" position="0 0 0"></a-video>
+<a-image id="preview-button" class="clickable" src="#preview" alpha-test="0.5" position="0 0 0" height="0.552" width="1">
+</a-image>
+</a-entity>    
+</a-entity>	
 
-<a-gltf-model rotation="20 0 0 " position="0 0.5 0" scale="0.05 0.05 0.05" src="#raccoonModel" animation-mixer>
-    </a-entity>
+<!--  panel2 表示  -->  
+<a-entity visible="true" id="panel2" position="0.6 0.6 0">
+  	
+</a-entity>
 
-    <a-entity mindar-image-target="targetIndex: 1">
-<a-text value="Fujiwara" color="white" align="center" width="2" position="0 -0.4 0"></a-text>        
-<a-plane src="#ura" position="0 0 0" height="0.552" width="1" rotation="30 0 0"></a-plane>
-
-      <a-gltf-model rotation="20 0 0 " position="0 0.5 0" scale="0.05 0.05 0.05" src="#bearModel" animation-mixer>
-
-    </a-entity>
-
-      </a-scene>
-  </body>
+</a-entity>  
+</a-scene>
+</div>	
+</body>
 </html>
