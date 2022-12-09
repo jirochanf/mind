@@ -23,18 +23,18 @@
 
 <a-assets>
   <img id="card" src="https://jirochanf.github.io/card//assets/card31.png" />
-  <img id="web-button" src="https://jirochanf.github.io/card//assets/web.png" />
-  <img id="location-button" src="https://jirochanf.github.io/card/assets/youtube.png" />
-  <img id="profile-button" src="https://jirochanf.github.io/card/assets/kao2.png" />
-  <img id="phone-button" src="https://jirochanf.github.io/card/assets/phone.png" />
-  <img id="email-button" src="https://jirochanf.github.io/card/assets/email.png" />
-  <img id="play-button" src="https://jirochanf.github.io/card/assets/play.png" />
-  <img id="left-button" src="https://jirochanf.github.io/card/assets/left.png" />
-  <img id="right-button" src="https://jirochanf.github.io/card/assets/right.png" />
+  <img id="icon-web" src="https://jirochanf.github.io/card//assets/web.png" />
+  <img id="icon-location" src="https://jirochanf.github.io/card/assets/youtube.png" />
+  <img id="icon-profile" src="https://jirochanf.github.io/card/assets/kao2.png" />
+  <img id="icon-phone" src="https://jirochanf.github.io/card/assets/phone.png" />
+  <img id="icon-email" src="https://jirochanf.github.io/card/assets/email.png" />
+  <img id="icon-play" src="https://jirochanf.github.io/card/assets/play.png" />
+  <img id="icon-left" src="https://jirochanf.github.io/card/assets/left.png" />
+  <img id="icon-right" src="https://jirochanf.github.io/card/assets/right.png" />
   <img id="preview" src="https://jirochanf.github.io/card/assets/mind3_prev01.jpg" />
   <video id="video-mp4" autoplay="false" loop="false" src="https://jirochanf.github.io/card/assets/video31.mp4"></video>
   <video id="video-webm" autoplay="false" loop="false" src="https://jirochanf.github.io/card/assets/paintandquest.webm"></video>
-  <img id="namecard" src="https://jirochanf.github.io/card/assets/alubum_mind3_1.jpg" />
+  <img id="preview2" src="https://jirochanf.github.io/card/assets/alubum_mind3_1.jpg" />
   <img id="preview3" src="https://jirochanf.github.io/card/assets/alubum_mind3_2.jpg" />
   <img id="ura" src="https://jirochanf.github.io/card/assets/ura_guide.png" />
 
@@ -58,19 +58,42 @@
 <a-image id="preview-button" class="clickable" src="#preview" alpha-test="0.5" position="0 0 0" height="0.552" width="1">
 </a-image>
 </a-entity> 
+<!--  スライド　  -->
+<a-entity id="panel-item1" visible="false">
+<a-image class="clickable" src="#preview2" alpha-test="0.5" position="0 0 0" height="0.552" width="1"></a-image>
+</a-entity>
+<a-entity id="panel-item2" visible="false">
+<a-image class="clickable" src="#preview3" alpha-test="0.5" position="0 0 0" height="0.552" width="1"></a-image>
+        </a-entity>
+<!--  ボタン　  -->	
+<a-image visible="false" id="left-button" class="clickable" src="#icon-left" position="-0.7 0 0" height="0.15" width="0.15"></a-image>
+<a-image visible="false" id="right-button" class="clickable" src="#icon-right" position="0.7 0 0" height="0.15" width="0.15"></a-image>
+</a-entity>
+<a-image visible="false" id="profile-button" class="clickable" src="#icon-profile" 
+         position="-0.42 -0.5 0" height="0.15" width="0.15"></a-image>
+<a-image visible="false" id="web-button" class="clickable" src="#icon-web" alpha-test="0.5"
+         link="href: https://netken.info; title: netken.info;"
+         position="-0.14 -0.5 0" height="0.15" width="0.15"></a-image>
+<a-image visible="false" id="email-button" class="clickable" src="#icon-email"
+         position="0.14 -0.5 0" height="0.15" width="0.15"
+        link="href: mailto:fujiwara@yomde.net;"></a-image>
+<a-image visible="false" id="location-button" class="clickable" src="#icon-location" 
+         position="0.42 -0.5 0" height="0.15" width="0.15"
+         link="href: https://www.youtube.com/channel/UC262c4cdRkfrllw37mpUKOA/videos; title: Senior Travel;"></a-image>
+  
+<a-gltf-model src="#avatarModel" position="-0.3 0.4 0" rotation="0 -180 0" scale="0.07 0.07 0.07" animation="property: rotation; to: -30 -180 0; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"></a-gltf-model>
+	
 </a-entity>	
 
 <!--  panel2 表示  -->  
-<a-entity visible="true" id="panel2" position="0.6 0.6 0">
+<a-entity visible="false" id="panel2" position="0.8 0.8 0">
 <!--  動画表示  -->
 <a-entity id="panel2-item0">
-<a-video id="video-link2" webkit-playsinline playsinline width="1" height="0.552" position="0 0 0"></a-video>
-<a-image id="preview-button2" class="clickable" src="#preview" alpha-test="0.5" position="0 0 0" height="0.552" width="1">
+<a-video id="video-link2" webkit-playsinline playsinline width="0.8" height="0.4" position="0.8 0.8 0"></a-video>
+<a-image id="preview-button2" class="clickable" src="#preview2" alpha-test="0.5" position="0.8 0.8 0" height="0.4" width="0.8">
 </a-image>
-</a-entity>   
-  	
 </a-entity>
-
+  	
 </a-entity>  
 </a-scene>
 </div>	
