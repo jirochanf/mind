@@ -109,7 +109,7 @@ AFRAME.registerComponent('mytarget', {
             setTimeout(() => {
               showPortfolio(() => {
                 setTimeout(() => {
-//                 showInfo();
+                 showInfo();
                 }, 600);
               });
             }, 600);
