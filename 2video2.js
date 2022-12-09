@@ -83,10 +83,10 @@ const showPortfolio = (done) => {
             const testVideo = document.createElement( "video" );
             const canplayWebm = testVideo.canPlayType( 'video/webm; codecs="vp8, vorbis"' );
             if (canplayWebm == "") {
-              document.querySelector("#video-link2").setAttribute("src", "#video-mp4");
+              document.querySelector("#video-link2").setAttribute("src", "#video-mp41");
               document.querySelector("#video-mp4").play();
             } else {
-              document.querySelector("#video-link2").setAttribute("src", "#video-webm");
+              document.querySelector("#video-link2").setAttribute("src", "#video-webm1");
               document.querySelector("#video-webm").play();
             }
           });
@@ -101,6 +101,7 @@ const showPortfolio = (done) => {
     }
 
     //  Aframeでターゲット0を摘出 
+
 AFRAME.registerComponent('mytarget', {
       init: function () {
         this.el.addEventListener('targetFound', event => {
