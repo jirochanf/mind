@@ -84,10 +84,10 @@ const showPortfolio = (done) => {
             const canplayWebm = testVideo.canPlayType( 'video/webm; codecs="vp8, vorbis"' );
             if (canplayWebm == "") {
               document.querySelector("#video-link2").setAttribute("src", "#video-mp41");
-              document.querySelector("#video-mp4").play();
+              document.querySelector("#video-mp41").play();
             } else {
               document.querySelector("#video-link2").setAttribute("src", "#video-webm1");
-              document.querySelector("#video-webm").play();
+              document.querySelector("#video-webm1").play();
             }
           });
           
