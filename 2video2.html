@@ -75,18 +75,21 @@
   <a-image visible="false" id="left-button" class="clickable" src="#icon-left" position="-0.7 0 0" height="0.15" width="0.15"></a-image>
   <a-image visible="false" id="right-button" class="clickable" src="#icon-right" position="0.7 0 0" height="0.15" width="0.15"></a-image>
   <a-image visible="false" id="profile-button" class="clickable" src="#icon-profile" position="-0.42 -0.5 0" height="0.15" width="0.15"></a-image>
-      <a-image visible="false" id="web-button" class="clickable" src="#icon-web" alpha-test="0.5" position="-0.14 -0.5 0" height="0.15" width="0.15"
+  <a-image visible="false" id="web-button" class="clickable" src="#icon-web" alpha-test="0.5" position="-0.14 -0.5 0" height="0.15" width="0.15"
                link="href: https://netken.info/; title: My Home Page;"></a-image>
-      <a-image visible="false" id="email-button" class="clickable" src="#icon-email"  position="0.14 -0.5 0" height="0.15" width="0.15"
+  <a-image visible="false" id="email-button" class="clickable" src="#icon-email"  position="0.14 -0.5 0" height="0.15" width="0.15"
                link="href: mailto:fujiwara@yomde.net;"></a-image>
-      <a-image visible="false" id="location-button" class="clickable" src="#icon-location" position="0.42 -0.5 0" height="0.15" width="0.15"
+  <a-image visible="false" id="location-button" class="clickable" src="#icon-location" position="0.42 -0.5 0" height="0.15" width="0.15"
                link="href: https://www.youtube.com/channel/UC262c4cdRkfrllw37mpUKOA/videos; title: Senior Travel;"></a-image>
 
-<a-gltf-model id="avatar" rotation="0 0 0" position="-0.2 0.4 0" scale="0.04 0.04 0.04" src="#raccoonModel"></a-gltf-model>
+<a-gltf-model id="avatar" rotation="0 0 0" position="-0.4 0.7 0" scale="0.04 0.04 0.04" src="#raccoonModel"          
+              animation="property: position; to: -0.2 0.4 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
+></a-gltf-model>
+  
   
   </a-entity>
 <!--  panel2 表示  -->  
-<a-entity visible="false" id="panel2" position="0.3 0.3 0" rotation="20 -20 0">
+<a-entity visible="false" id="panel2" position="0.3 0.3 0" rotation="10 0 0">
 <!--  動画表示  -->
 <a-entity id="panel2-item0">
 <a-video id="video-link2" webkit-playsinline playsinline width="0.8" height="0.45" position="0.3 0.3 0"></a-video>
